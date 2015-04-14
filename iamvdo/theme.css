@@ -180,10 +180,15 @@ body {
   display: block;
   margin: 30px 1.5em;
 }
-.reveal ul ul{
+.reveal ul ul, 
+.reveal ul ol,
+.reveal ol ul,
+.reveal ol ol {
   margin: 0 1.5em 5px 1.5em;
   font-size: .9em;
-  list-style: disc;
+}
+.reveal ul ul {
+    list-style: disc;
 }
 .reveal small {
   line-height: normal;
