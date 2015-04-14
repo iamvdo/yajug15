@@ -1,0 +1,68 @@
+.reveal .questions {
+  font-size: 1.8em;
+  font-family: Roboto Slab, serif;
+}
+.reveal .questions p {
+  margin: .5em 0;
+  text-align: center;
+  color: #f63752;
+}
+.reveal .questions-faux,
+.reveal .questions-vrai {
+  display: inline-block;
+  padding: 1em .5em;
+  border-radius: 50%;
+}
+.reveal .questions-faux {
+  color: #f03d36;
+  background: #fff;
+}
+.reveal .questions-vrai {
+  color: yellowgreen;
+  background: #fff;
+}
+.reveal .questions span {
+  /* color: #fff; */
+}
+.reveal .questions span code {
+  color: #fff;
+}
+.part .state-background {
+  background: #2980b9;
+  background-size: 100%;
+}
+.part h1 {
+  color: #FFF;
+}
+.questions .state-background {
+  background: yellow;
+  background-size: 100%;
+}
+.jdcjdr .state-background {
+  background: #f63752;
+  background-size: 100%;
+}
+.jdcjdr .questions p {
+  color: yellow;
+}
+
+/* tableau correspondance valeurs specifiees vs calculees */
+.reveal table {
+  table-layout: fixed;
+  width: 100%;
+  border: 2px solid black;
+  margin-bottom: 200px;
+  border-collapse: collapse;
+  font-size: .9em;
+}
+.reveal table th {
+  text-align: center;
+}
+.reveal td {
+  padding: .5em 0;
+  border: 1px solid rgba(0,0,0,.1);
+}
+.reveal tr th:last-child,
+.reveal tr td:last-child {
+  width: 10%;
+}
