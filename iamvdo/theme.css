@@ -434,14 +434,12 @@ body {
 .reveal.iamvdo .slides>section.past {
   display: block;
   opacity: 0;
-  filter: alpha(opacity=0);
   -webkit-transform: translateX(-640px)translateX(320px)rotateY(20deg)translateX(320px);
           transform: translateX(-640px)translateX(320px)rotateY(20deg)translateX(320px);
 }
 .reveal.iamvdo .slides>section.future {
   display: block;
   opacity: 0;
-  filter: alpha(opacity=0);
   -webkit-transform: translateX(640px)translateX(-320px)rotateY(-20deg)translateX(-320px);
           transform: translateX(640px)translateX(-320px)rotateY(-20deg)translateX(-320px);
 }
@@ -455,7 +453,6 @@ body {
  *********************************************/
 .reveal .slides section .fragment.current-visible {
   opacity: 0;
-  filter: alpha(opacity=0);
   -webkit-transform: scale(.9);
       -ms-transform: scale(.9);
           transform: scale(.9);
@@ -465,7 +462,6 @@ body {
 
 .reveal .slides section .fragment.current-visible.current-fragment {
   opacity: 1;
-  filter: alpha(opacity=100);
   -webkit-transform: scale(1);
       -ms-transform: scale(1);
           transform: scale(1);
