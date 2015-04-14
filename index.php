@@ -258,6 +258,10 @@ if (!isset($root)) {
           <img src="<?php echo $root; ?>iamvdo/images/boxsizing.jpg" alt="La propriété box-sizing en CSS3">
         </section>
 
+        <section class="questions questions--jdcjdr" data-state="jdcjdr">
+          <p class="questions-titre"><code>* { box-sizing: border-box }</code></p>
+        </section>
+
         <section class="questions" data-state="questions">
           <p class="questions-titre"><q>La largeur d'un <em>block</em> est égale à <span>100% de la largeur de son parent</span></q></p>
           <p class="questions-faux fragment">FAUX</p>
