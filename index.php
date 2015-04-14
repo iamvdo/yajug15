@@ -457,17 +457,17 @@ if (!isset($root)) {
           <ul>
             <li>Interactions:
               <ol>
-                <li class="fragment">Si <code>display:none</code>
+                <li class="fragment">Si <code>display</code> est <code>none</code>
                   <ul>
                     <li><code>position</code> et <code>float</code> sans effets</li>
                    </ul>
                 </li>
-                <li class="fragment">Si <code>position:absolute</code> ou <code>fixed</code>
+                <li class="fragment">Si <code>position</code> est <code>absolute</code> ou <code>fixed</code>
                   <ul>
                     <li><code>float</code> est <code>none</code>, <code>display</code> ▸ tableau</li>
                   </ul>
                 </li>
-                <li class="fragment">Si <code>float:left</code> ou <code>right</code>
+                <li class="fragment">Si <code>float</code> est <code>left</code> ou <code>right</code>
                   <ul>
                     <li><code>display</code> ▸ tableau</li>
                   </ul>
@@ -787,7 +787,7 @@ if (!isset($root)) {
             <li>Débordements</li>
           </ul>
           <ul class="fragment">
-            <li><strong>LA solution</strong> à tous vos problèmes !</li>
+            <li><strong>LA solution</strong> à tous vos problèmes ?</li>
             <li>Support très large, seuls IE&lt;9 ont besoin d'un <a href="https://github.com/doctyper/flexie">polyfill</a></li>
             <li><a href="http://pleeease.io">Automatiser les préfixes</a></li>
           </ul>
