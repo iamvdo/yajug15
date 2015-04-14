@@ -914,7 +914,6 @@ if (!isset($root)) {
             #ex5 .parent {
               position: absolute;
               width: 200px; height: 200px;
-              border: 5px solid black;
             }
             #ex5 .parent:nth-child(2) {
               margin-top: 50px; margin-left: 50px;
@@ -928,7 +927,6 @@ if (!isset($root)) {
               
             }
             #ex5 .enfant--un{
-              z-index: 1;
             }
             #ex5 .enfant--deux{
               background: yellowgreen !important;
@@ -941,21 +939,22 @@ if (!isset($root)) {
 
             </style>
             <div>
-<pre><code class="liveCoding css" data-livecoding-id="ex5" contenteditable spellcheck="false">.parent { /* bordure black */
+<pre><code class="liveCoding css" data-livecoding-id="ex5" contenteditable spellcheck="false">.enfant {
   position: absolute;
 }
-.parent:first-child {
+.enfant--un {
   z-index: 1;
 }
+.enfant--deux {
+  
+}
+.parent {
+  position: absolute;
+}
 .parent:nth-child(2) {
-  z-index: 2;
-}
-.enfant {
   
 }
-.enfant--un {
-  
-}</code></pre>
+</code></pre>
             </div>
             <div id="ex5">
               <div>
