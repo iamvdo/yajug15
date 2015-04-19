@@ -303,18 +303,21 @@ body {
  *********************************************/
 .reveal a:not(.image) {
   color: #fff;
-  border-bottom: 1px solid #111;
+  border: none;
   text-decoration: none;
   -webkit-transition: color .15s, background .15s;
           transition: color .15s, background .15s;
+  background: linear-gradient(rgba(0,0,0,.5), rgba(0,0,0,.5) 1px) no-repeat;
+  background-size: 100% 4px;
+  background-position: bottom 2px right;
 }
 
 .reveal a:not(.image):hover {
   color: #fff;
-  background: rgba(0,0,0,.8);
-  border: none;
+  /*background: rgba(0,0,0,.8);*/
   /* border-bottom-color: #fff; */
   text-shadow: none;
+  background-size: 100% calc(100% - 6px);
 }
 
 /*********************************************
