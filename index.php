@@ -11,9 +11,9 @@ if (!isset($root)) {
   <head>
     <meta charset="utf-8">
 
-    <title>CSS Paris Meetup #1</title>
+    <title>YaJUG 2015: CSS</title>
 
-    <meta name="description" content="Présentation au meetup CSS Paris">
+    <meta name="description" content="Présentation au YaJUG Luxembourg, 21 avril 2015">
     <meta name="author" content="Vincent De Oliveira">
     <link rel="icon" href="http://iamvdo.me/images/favicon.png"/>
 
@@ -56,7 +56,7 @@ if (!isset($root)) {
       <div class="slides">
         <section>
           <h1>#CSS</h1>
-          <h2>Ce que vous avez toujours voulu savoir</h2>
+          <h2>Des bases de CSS2.1 aux fonctionnalités avancées de CSS3</h2>
           <p class="u-aligncenter u-small u-margin">
             Vincent De Oliveira &middot; <a href="http://twitter.com/iamvdo">@iamvdo</a>
           </p>
@@ -65,7 +65,8 @@ if (!isset($root)) {
         <section class="me">
           <h2>Vincent De Oliveira</h2>
           <ul class="vcard">
-            <li>Formateur web <a href="http://www.ensg.eu" title="Ecole Nationale des Sciences Géographiques">ENSG Géomatique</a></li>
+            <li>Formateur web indépendant</li>
+            <li><a href="http://www.ensg.eu" title="Ecole Nationale des Sciences Géographiques">ENSG Géomatique</a>, <a href="http://webschoolfactory.com">WebSchoolFactory</a></li>
             <li><a href="http://twitter.com/iamvdo">@iamvdo</a></li>
             <li><a href="http://css3create.com">CSS3Create</a>, <a href="http://iamvdo.me">iamvdo</a>, <a href="http://pleeease.io">Pleeease</a></li>
             <li>Livre <a href="http://livre-css3.fr">CSS3 Le design web moderne</a></li>
