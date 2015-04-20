@@ -197,36 +197,46 @@ if (!isset($root)) {
           <ul>
             <li>Cibler des éléments en fonction de leur attributs (et de leurs valeurs), mêmes les <em>data-attributes</em> de HTML5</li>
             <li class="fragment"><code>[attr]</code>, <code>[attr=val]</code>, <code>[attr~=val]</code></li>
-            <li class="fragment"><code>[attr^=val]</code>, <code>[attr$=val]</code>, <code>[attr*=val]</code></li>
+            <li class="fragment"><code>[attr^=abc]</code>: commençant par</li>
+            <li class="fragment"><code>[attr$=abc]</code>: finissant par</li>
+            <li class="fragment"><code>[attr*=abc]</code>: contient</li>
           </ul>
-          <article class="demo fragment">
+        </section>
+
+        <section data-state="showcase">
+          <article class="demo">
             <style>
-            #e1 ul {
-              padding-left: 3em;
+            #e1 {
+              margin: 50px 0;
             }
-            #e1 li {
-              float: left;
-              margin-left: 2em;
+            #e1 h1 {
+              background: none;
+              font-size: 1.1em;
+            }
+            #e1 p {
+              font-size: .7em;
+              text-align: left;
+            }
+            #e1 abbr {
+              border-bottom: 1px dashed deepskyblue;
+            }
+            #e1 a {
+              color: deepskyblue;
             }
             </style>
             <div>
-<pre class="small"><code class="liveCoding language-markup" data-livecoding-id="e1" contenteditable spellcheck="false">&lt;ul>
-  &lt;li id="art18">Vers article 18&lt;/li>
-  &lt;li id="art12">Vers article 12&lt;/li>
-  &lt;li id="rub4">Vers rubrique 4&lt;/li>
-  &lt;li id="art3">Vers article 3&lt;/li>
-&lt;/ul></code></pre>
-<pre class="small"><code class="liveCoding" data-livecoding-id="e1" contenteditable spellcheck="false">ul li[id^=art] {
-  color: black;
-}</code></pre>
+<pre class="small"><code class="liveCoding css" data-livecoding-id="e1" contenteditable="" spellcheck="false">/* CSS */
+a {
+  color: deepskyblue;
+}
+</code></pre>
             </div>
             <div id="e1">
-              <ul>
-                <li id="art18">Vers article 18</li>
-                <li id="art12">Vers article 12</li>
-                <li id="rub4">Vers rubrique 4</li>
-                <li id="art3">Vers article 3</li>
-              </ul>
+              <h1>Le livre «CSS3 Le design web moderne»</h1>
+              <p>La <a href="http://fr.wikipedia.org/wiki/Feuilles_de_style_en_cascade">maîtrise de CSS</a> est un atout majeur dans la réalisation d’un design web moderne et innovant. Indissociable d’<abbr title="HyperText Markup Language">HTML5</abbr>, <a href="http://css3create.com">CSS3 étend les capacités du langage</a> en vous offrant des possibilités jusque là inédites.</p>
+              <p>Que vous soyez webdesigner, développeur ou amateur éclairé, vous trouverez dans <a href="http://livre-css3.fr">ce livre</a>, au travers d’exemples précis, une méthodologie efficace pour mettre en application <abbr title="Cascading Style Sheet">CSS3</abbr> sur vos sites web dès aujourd’hui.</p>
+              <p>Vous découvrirez les <a href="#">nouveaux modèles de positionnement</a> permettant des mises en pages évoluées ainsi que les nouveautés en matière de <a href="#">typographie</a>. Sans utiliser d’images, vous pourrez ajouter des ombres, <a href="#">réaliser des coins arrondis</a>, des effets de transparence et des dégradés complexes. Vos sites deviendront plus attractifs grâce à l’ajout <a href="#">d’animations</a>, de <a href="#">transformations en 2D et en 3D</a>. Vous créerez des applications mobiles performantes avec <a href="#">la gestion précise des médias alternatifs</a>, tels que les smartphones et tablettes.</p>
+              <p>Pendant la lecture de l'ouvrage, retrouvez tous les exemples sur <a href="http://livre-css3.fr/bugdroid">le site de démonstration dédié</a>.</p>
             </div>
           </article>
         </section>
