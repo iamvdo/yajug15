@@ -94,6 +94,10 @@ body {
 .reveal h3 { font-size: 1.1em; text-align: left; display: block; background: transparent; color: #111;}
 .reveal h4 { font-size: 1em;    }
 
+.reveal h2 code {
+  white-space: nowrap;
+}
+
 .reveal h1 + h2 {
   font-size: 1.4em;
   background: transparent;
@@ -193,6 +197,13 @@ body {
 .reveal small {
   line-height: normal;
   vertical-align: baseline;
+}
+.reveal sub,
+.reveal sup {
+  font-size: .6em;
+}
+.reveal var {
+  font-style: italic;
 }
 .reveal pre {
   position: relative;
