@@ -7,6 +7,12 @@
   text-align: center;
   color: #f63752;
 }
+.reveal .questions-titre {
+
+}
+.reveal .questions-titre--big {
+  font-size: 2em;
+}
 .reveal .questions-faux,
 .reveal .questions-vrai {
   display: inline-block;
@@ -45,6 +51,10 @@
 .jdcjdr .questions p {
   color: yellow;
 }
+.showcase .state-background {
+  background: #333;
+}
+.vdoMenu li.part a { background: #2980b9; }
 
 /* tableau correspondance valeurs specifiees vs calculees */
 .reveal table {

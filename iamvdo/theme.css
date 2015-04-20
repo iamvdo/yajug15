@@ -216,6 +216,9 @@ body {
   height: 110px;
   overflow: visible;
 }
+.reveal pre.syntax {
+  font-size: 0.7em;
+}
 .reveal ul code,
 .reveal p code,
 .reveal h2 code {
@@ -260,8 +263,8 @@ body {
   z-index: 20;
 }
 .reveal pre.small:hover code,
-.reveal pre.small code:focus,
-.reveal code:focus {
+.reveal pre.small code:focus /*,
+.reveal code:focus*/ {
   max-height: 400px;
   height: 400px;
 }
