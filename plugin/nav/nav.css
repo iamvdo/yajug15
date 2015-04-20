@@ -18,6 +18,7 @@
 	float: left;
 	list-style: none;
 	text-align: center;
+	font-size: 0.8em;
 }
 .vdoMenu ul li a{
 	display: block;

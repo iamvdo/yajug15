@@ -147,7 +147,7 @@ var _ = self.Prism = {
       parent.className = parent.className.replace(lang, '').replace(/\s+/g, ' ') + ' language-' + language;
     }
 
-    var code = element.textContent;
+    var code = element.innerText || element.textContent;
 
     if(!code) {
       return;

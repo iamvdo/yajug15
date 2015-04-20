@@ -11,8 +11,18 @@ var LiveCoding = (function() {
 		update(allPre[i]);
 
 		// update when keyup
-		allPre[i].addEventListener('keyup', function(){
+		allPre[i].addEventListener('keyup', function(e) {
+			//console.log('up', this.innerHTML)
 			update(this);
+		});
+
+		// update hightlight when blur
+		allPre[i].addEventListener('blur', function () {
+			// if Prism is here
+			if (Prism !== undefined) {
+				//console.log(this.innerHTML)
+				Prism.highlightElement(this);
+			}
 		});
 	}
 
@@ -27,16 +37,16 @@ var LiveCoding = (function() {
 		// highlight.js and prism.js
 		var isCSS = (elem.classList.contains('css') || elem.classList.contains('language-css'));
 		var isMarkup = (elem.classList.contains('xml') || elem.classList.contains('language-markup'));
-	
+
 		// if it's CSS
 		if(isCSS){
 
 			// if PrefixFree is here
 			if(typeof PrefixFree !== "undefined"){
 				// prefix code
-				val = PrefixFree.prefixCSS(val);	
+				val = PrefixFree.prefixCSS(val);
 			}
-			
+
 			// cleanup
 			val = val.replace(/^\s+/g,'').replace(/\s+$/g,'');
 			var reg = /(\{|\})/g;
