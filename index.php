@@ -166,6 +166,186 @@ if (!isset($root)) {
           </ul>
         </section>
 
+        <section data-state="part">
+          <h1>Les sélecteurs</h1>
+        </section>
+
+        <section>
+          <h2>Les sélecteurs CSS1, 2.1 et 3</h2>
+          <ul>
+            <li class="fragment">Plus de 40 sélecteurs</li>
+            <li class="fragment">Parcourir le DOM</li>
+            <li class="fragment">Cibler les éléments</li>
+          </ul>
+          <ul>
+            <li class="fragment">Sélecteur :
+              <ul>
+                <li class="fragment">d'éléments (<code>E</code>)</li>
+                <li class="fragment">d'enfants (<code>E F</code>, <code>E > F</code>)</li>
+                <li class="fragment">de frères suivants (<code>E + F</code>, <code>E ~ F</code>)</li>
+                <li class="fragment">d'id (<code>E#id</code>) et de classe (<code>E.class</code>)</li>
+                <li class="fragment">pseudo-classes (<code>E:first-child</code>, <code>E:last-child</code>...)</li>
+                <li class="fragment">pseudo-classes dynamiques (<code>E:hover</code>, <code>E:focus</code>, <code>E:active</code>...)</li>
+                <li class="fragment">pseudo-éléments (<code>E::first-letter</code>, <code>E::after</code>, <code>E::before</code>...)</li>
+              </ul>
+            </li>
+          </ul>
+        </section>
+
+        <section>
+          <h2>Les sélecteurs d'attributs</h2>
+          <ul>
+            <li>Cibler des éléments en fonction de leur attributs (et de leurs valeurs), mêmes les <em>data-attributes</em> de HTML5</li>
+            <li class="fragment"><code>[attr]</code>, <code>[attr=val]</code>, <code>[attr~=val]</code></li>
+            <li class="fragment"><code>[attr^=val]</code>, <code>[attr$=val]</code>, <code>[attr*=val]</code></li>
+          </ul>
+          <article class="demo fragment">
+            <style>
+            #e1 ul {
+              padding-left: 3em;
+            }
+            #e1 li {
+              float: left;
+              margin-left: 2em;
+            }
+            </style>
+            <div>
+<pre class="small"><code class="liveCoding language-markup" data-livecoding-id="e1" contenteditable spellcheck="false">&lt;ul>
+  &lt;li id="art18">Vers article 18&lt;/li>
+  &lt;li id="art12">Vers article 12&lt;/li>
+  &lt;li id="rub4">Vers rubrique 4&lt;/li>
+  &lt;li id="art3">Vers article 3&lt;/li>
+&lt;/ul></code></pre>
+<pre class="small"><code class="liveCoding" data-livecoding-id="e1" contenteditable spellcheck="false">ul li[id^=art] {
+  color: black;
+}</code></pre>
+            </div>
+            <div id="e1">
+              <ul>
+                <li id="art18">Vers article 18</li>
+                <li id="art12">Vers article 12</li>
+                <li id="rub4">Vers rubrique 4</li>
+                <li id="art3">Vers article 3</li>
+              </ul>
+            </div>
+          </article>
+        </section>
+
+        <section>
+          <h2>La pseudo-classe <code>:nth-child()</code></h2>
+          <ul>
+            <li>Cible le n<sup>ième</sup> enfant d'un élément
+              <ul>
+                <li class="fragment"><code>:nth-child(3)</code> cible le 3e enfant</li>
+                <li class="fragment"><code>:nth-child(an+b)</code> ou <var>a</var> et <var>b</var> sont des entiers</li>
+              </ul>
+            </li>
+            <li class="fragment">Ex: <code>:nth-child(3n+2)</code>, pour chaque entier positif de <var>n</var> :
+              <ul>
+                <li>n=0, total= 2</li>
+                <li>n=1, total= 5</li>
+                <li>n=2, total= 8</li>
+                <li>Les 2e, 5e et 8e enfants sont sélectionnés</li>
+              </ul>
+            </li>
+          </ul>
+        </section>
+
+        <section>
+          <h2>La pseudo-classe <code>:nth-child()</code></h2>
+          <article>
+            <div>
+<pre class="small"><code class="liveCoding language-markup" data-livecoding-id="e2" contenteditable spellcheck="false">&lt;ul>
+  &lt;li>Item 1&lt;/li>
+  &lt;li>Item 2&lt;/li>
+  &lt;li>Item 3&lt;/li>
+  &lt;li>Item 4&lt;/li>
+  &lt;li>Item 5&lt;/li>
+  &lt;li>Item 6&lt;/li>
+  &lt;li>Item 7&lt;/li>
+  &lt;li>Item 8&lt;/li>
+  &lt;li>Item 9&lt;/li>
+  &lt;li>Item 10&lt;/li>
+&lt;/ul></code></pre>
+<pre class="small"><code class="liveCoding" data-livecoding-id="e2" contenteditable spellcheck="false">ul li:nth-child(3n+2) {
+   color: black;
+}</code></pre>
+            </div>
+            <div id="e2">
+              <ul>
+                <li>Item 1</li>
+                <li>Item 2</li>
+                <li>Item 3</li>
+                <li>Item 4</li>
+                <li>Item 5</li>
+                <li>Item 6</li>
+                <li>Item 7</li>
+                <li>Item 8</li>
+                <li>Item 9</li>
+                <li>Item 10</li>
+              </ul>
+            </div>
+          </article>
+        </section>
+
+        <section>
+          <h2>La pseudo-classe <code>:nth-child()</code></h2>
+          <ul>
+            <li>Se décline:
+              <ul>
+                <li class="fragment"><code>:nth-last-child()</code></li>
+                <li class="fragment"><code>:nth-of-type()</code>, <code>:nth-last-of-type()</code></li>
+              </ul>
+            </li>
+          </ul>
+        </section>
+
+        <section>
+          <h2>La pseudo-classe <code>:not()</code></h2>
+          <ul>
+            <li><code>:not()</code> permet de retirer un sélecteur simple:
+              <ul>
+                <li class="fragment"><code>div:not(.toto)</code></li>
+                <li class="fragment"><code>ul li a:not(:hover)</code></li>
+                <li class="fragment"><code>.toto:not(p)</code></li>
+                <li class="fragment"><code>a:not([href^=http])</code></li>
+              </ul>
+            </li>
+            <li class="fragment">Pas de sélecteur avancé
+              <ul>
+                <li><code>:not(div p)</code> est invalide</li>
+              </ul>
+            </li>
+          </ul>
+        </section>
+
+        <section>
+          <h2>Les pseudo-classes de <code>formulaires</code></h2>
+          <ul>
+              <li class="fragment"><code>:enabled</code>, <code>:disabled</code></li>
+              <li class="fragment"><code>:valid</code>, <code>:invalid</code></li>
+              <li class="fragment"><code>:checked</code></li>
+          </ul>
+          <article class="demo fragment">
+            <div>
+<pre><code class="liveCoding" data-livecoding-id="e3" contenteditable spellcheck="false">input {
+  vertical-align: middle;
+}
+input:checked + label {
+  color: black;
+}</code></pre>
+            </div>
+            <div id="e3">
+              <p><input type="checkbox" id="ch1" /><label for="ch1">Checkbox 1</label></p>
+              <p><input type="checkbox" id="ch2" /><label for="ch2">Checkbox 2</label></p>
+              <p><input type="checkbox" id="ch3" /><label for="ch3">Checkbox 3</label></p>
+            </div>
+          </article>
+          <ul class="small">
+              <li class="fragment">Présentation de Ryan Seddon: <a href="http://www.thecssninja.com/talks/abuse_checkboxes/">«101 ways to (ab)use a checkbox»</a></li>
+          </ul>
+        </section>
+
         <section>
           <h2>CSS, c'est simple!</h2>
           <ul>
