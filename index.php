@@ -73,6 +73,99 @@ if (!isset($root)) {
           </ul>
         </section>
 
+        <section data-state="part">
+          <h1>Bref historique</h1>
+        </section>
+
+        <section>
+          <h2>CSS1</h2>
+          <ul>
+              <li>Recommandation en 1996</li>
+              <li>Sélecteurs simples, positionnements basiques, tailles, marges, couleurs, polices, etc.</li>
+          </ul>
+        </section>
+
+        <section>
+          <h2>CSS2 et CSS2.1</h2>
+          <ul>
+              <li>Abandonnée en 1998</li>
+              <li>Trop de choses, trop complexes ou sous-spécifiées
+              <li>Pseudo-classes dynamiques, pseudo-éléments, polices personnalisées, gestion des médias, ombres sur les textes, etc.</li>
+          </ul>
+          <ul class="fragment">
+              <li>CSS 2.1: version "corrigée" de CSS2, ce qui a été retiré est mis à l'étude dans CSS3</li> 
+              <li>Recommandation en juin 2011</li>
+          </ul>
+        </section>
+
+        <section>
+          <h2>CSS3</h2>
+          <ul>
+              <li>En cours depuis 1999</li>
+              <li>Standard fragmenté en modules</li>
+              <li>3 modules en Recommandation, une trentaine à l'étude</li>
+          </ul>
+          <ul class="fragment">
+            <li><a href="http://www.xanthir.com/b4Ko0">CSS4 ne verra jamais le jour…</a></li>
+            <li>Des modules en L4, d'autres en L1</li>
+          </ul>
+        </section>
+
+        <section>
+          <h2>Démocratisation de CSS3</h2>
+          <p>Pourquoi entends t'on beaucoup parler de CSS3?</p>
+          <ul>
+            <li class="fragment">Meilleur ami de HTML5</li>
+            <li class="fragment">Sélecteurs étoffés</li>
+            <li class="fragment">Effets graphiques simplifiés: opacité, angles arrondis, ombres, dégradés, polices personnalisées, etc. (maintenance++)</li>
+            <li class="fragment">Accès à ce qui était réservé avant à JavaScript (interaction, animation, etc.)</li>
+            <li class="fragment">Nouveaux modes de positionnement</li>
+          </ul>
+          <ul>
+            <li class="fragment">Mise à jour auto. des navigateurs</li>
+            <li class="fragment">Support amélioré de CSS2.1</li>
+            <li class="fragment">Fin de IE6, IE7, IE8</li>
+          </ul>
+        </section>
+
+        <section>
+          <h2>Utiliser CSS3</h2>
+          <ul>
+            <li class="fragment">Connaitre le support navigateur</li>
+            <li class="fragment">Conserver la <strong>dégradation gracieuse</strong></li>
+            <li class="fragment">Mettre en place l'<strong>amélioration progressive</strong></li>
+          </ul>
+          <p class="fragment left">Pour cela:</p>
+          <ul>
+            <li class="fragment">Ne rien faire</li>
+            <li class="fragment">Utilisation des préfixes CSS</li>
+            <li class="fragment">Utilisation de styles alternatifs, via la cascade CSS</li>
+            <li class="fragment">Détection de fonctionnalités (CSS ou JS)</li>
+          </ul>
+          <p class="fragment">De nombreux outils existent…</p>
+        </section>
+
+        <section>
+          <h2>Mais c'est quoi au fait ?</h2>
+          <ul>
+            <li class="fragment">Cascading Style Sheets: feuilles de styles en cascade</li>
+            <li class="fragment">Langage de description</li>
+            <li class="fragment">Très (trop?) simple</li>
+          </ul>
+<pre class="fragment"><code class="css" contenteditable spellcheck="false">.selector {
+  color: blue;
+  font-size: 2em;
+}</code></pre>
+          <ul>
+            <li class="fragment">Un style :
+              <ul>
+                <li class="fragment">Un sélecteur</li>
+                <li class="fragment">Des règles</li>
+              </ul>
+            </li>
+          </ul>
+        </section>
+
         <section>
           <h2>CSS, c'est simple!</h2>
           <ul>
