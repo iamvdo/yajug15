@@ -1,0 +1,89 @@
+<!doctype html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <title>Animer au chargement de la page</title>
+<style>
+.browsers {
+  text-align: center;
+  padding: 0;
+}
+.browsers-item {
+  display: inline-block;
+  margin: 30px;
+
+  position: relative;
+  top: 0;
+  opacity: 1;
+
+  -webkit-animation: anim .6s 1 cubic-bezier(.5,2,.5,.8) backwards;
+  animation: anim .6s 1 cubic-bezier(.5,2,.5,.8) backwards;
+}
+.init .browsers-item {
+  -webkit-animation: none;
+  animation: none;
+}
+
+/* with delay */
+.browsers-item:nth-child(2) {
+  -webkit-animation-delay: .15s;
+  animation-delay: .15s;
+}
+.browsers-item:nth-child(3) {
+  -webkit-animation-delay: .3s;
+  animation-delay: .3s;
+}
+.browsers-item:nth-child(4) {
+  -webkit-animation-delay: .45s;
+  animation-delay: .45s;
+}
+.browsers-item:nth-child(5) {
+  -webkit-animation-delay: .6s;
+  animation-delay: .6s;
+}
+
+@-webkit-keyframes anim {
+  from {
+    top: -400px;
+    opacity: 0;
+  }
+  to {
+    top: 0;
+    opacity: 1;
+  }
+}
+
+@keyframes anim {
+  from {
+    top: -400px;
+    opacity: 0;
+  }
+  to {
+    top: 0;
+    opacity: 1;
+  }
+}
+.u-aligncenter {
+  text-align: center;
+}
+</style>
+</head>
+<body>
+  <ul class="browsers">
+    <li class="browsers-item"><img src="../images/chrome_64x64.png" alt=""></li>
+    <li class="browsers-item"><img src="../images/firefox_64x64.png" alt=""></li>
+    <li class="browsers-item"><img src="../images/internet-explorer_64x64.png" alt=""></li>
+    <li class="browsers-item"><img src="../images/opera_64x64.png" alt=""></li>
+    <li class="browsers-item"><img src="../images/safari_64x64.png" alt=""></li>
+  </ul>
+  <p class="u-aligncenter"><button>Toggle anim</button></p>
+  <script>
+  document.querySelector('button').addEventListener('click', function() {
+    document.querySelector('.browsers').classList.toggle('init');
+    setTimeout(function () {
+      document.querySelector('.browsers').classList.toggle('init');
+    }, 100);
+  });
+  </script>
+</body>
+</html>

@@ -595,6 +595,11 @@ opacity: .5;</code></pre>
           <iframe src="iamvdo/demos/transitions.html" width="100%"></iframe>
         </section>
 
+        <section data-state="showcase">
+          <h2>Histogramme</h2>
+          <iframe src="iamvdo/demos/histogramme.html" width="100%" height="400"></iframe>
+        </section>
+
         <section>
           <h2>Animez plusieurs états: les animations</h2>
           <ul>
@@ -653,8 +658,17 @@ opacity: .5;</code></pre>
         </section>
 
         <section data-state="showcase">
+          <h2>Apparitions</h2>
+          <iframe src="iamvdo/demos/chargement.html" width="100%" height="500"></iframe>
+        </section>
+
+        <section data-state="showcase">
           <h2>Formulaire animé</h2>
           <iframe src="iamvdo/demos/animations.html" width="100%" height="500"></iframe>
+        </section>
+
+        <section data-state="part">
+          <h1>Back to the CSS</h1>
         </section>
 
         <section>
@@ -677,7 +691,7 @@ opacity: .5;</code></pre>
         </section>
 
         <section data-state="part">
-          <h1>Les bases CSS</h1>
+          <h1>Le concept de CSS</h1>
         </section>
 
         <section class="questions" data-state="questions">
@@ -686,56 +700,56 @@ opacity: .5;</code></pre>
         </section>
 
         <section>
-          <h2>La <span>cascade CSS</span></h2>
+          <h2>La cascade CSS</h2>
           <ul>
             <li>CSS: Feuilles de styles en cascade</li>
-            <li>Différentes origines:
-              <ul>  
-                <li>Author (les devs CSS)</li>
-                <li>User (les gens)</li>
-                <li>UA (les navigateurs) + réglages navigateur du user</li>
+            <li class="fragment">Différentes origines:
+              <ul>
+                <li class="fragment">Author (les devs CSS)</li>
+                <li class="fragment">User (les gens)</li>
+                <li class="fragment">UA (les navigateurs) + réglages navigateur du user</li>
               </ul>
-            <li>La cascade CSS applique un poids à chaque déclaration</li>
+            <li class="fragment">La cascade CSS applique un poids à chaque déclaration</li>
           </ul>
         </section>
 
         <section>
-          <h2>La <span>cascade CSS</span> (ordre)</h2>
+          <h2>La cascade CSS (ordre)</h2>
           <ul>
             <li>4 étapes pour les styles:
               <ol>
-                <li>Récupére toutes les déclarations CSS (pour le média cible)</li>
-                <li>Tri suivant cet ordre:
+                <li class="fragment">Récupére toutes les déclarations CSS (pour le média cible)</li>
+                <li class="fragment">Tri suivant cet ordre:
                   <ul>
                     <li>UA ▸ User ▸ Author ▸ Author !important ▸ User !important</li>
                   </ul>
                 </li>
-                <li>Tri par <strong>spécificité des sélecteurs CSS</strong></li>
-                <li>Enfin, tri par position dans le CSS (ordre du code)</li>
+                <li class="fragment">Tri par <strong>spécificité des sélecteurs CSS</strong></li>
+                <li class="fragment">Enfin, tri par position dans le CSS (ordre du code)</li>
               </ol>
             </li>
           </ul>
         </section>
 
         <section>
-          <h2><span>Spécificité</span> des sélecteurs</h2>
+          <h2>Spécificité des sélecteurs</h2>
           <ul>
-            <li>3 valeurs: 
+            <li>3 valeurs:
               <ul>
-                <li><strong>A</strong> ▸ Nombre d'<code>id</code></li>
-                <li><strong>B</strong> ▸ Nombre de <code>class</code>, pseudo-classes, d'attributs</li>
-                <li><strong>C</strong> ▸ Nombre d'éléments, pseudo-éléments</li>
+                <li class="fragment"><strong>A</strong> ▸ Nombre d'<code>id</code></li>
+                <li class="fragment"><strong>B</strong> ▸ Nombre de <code>class</code>, pseudo-classes, d'attributs</li>
+                <li class="fragment"><strong>C</strong> ▸ Nombre d'éléments, pseudo-éléments</li>
               </ul>
             </li>
-            <li>Exemples: 
+            <li class="fragment">Exemples:
               <ul>
-                <li><code>#toto</code> <span class="right">1,0,0</span></li>
-                <li><code>.inner ul li</code> <span class="right">0,1,2</span></li>
-                <li><code>a:hover</code> <span class="right">0,1,1</span></li>
+                <li class="fragment"><code>#toto</code> <span class="right">1,0,0</span></li>
+                <li class="fragment"><code>.inner ul li</code> <span class="right">0,1,2</span></li>
+                <li class="fragment"><code>a:hover</code> <span class="right">0,1,1</span></li>
               </ul>
             </li>
-            <li>Styles inline, <code>!important</code></li>
-            <li>Cas particulier <code>:not()</code></li>
+            <li class="fragment">Styles inline, <code>!important</code></li>
+            <li class="fragment">Cas particulier <code>:not()</code></li>
           </ul>
         </section>
 
@@ -755,18 +769,18 @@ opacity: .5;</code></pre>
         </section>
 
         <section>
-          <h2>Les <span>valeurs CSS</span>*</h2>
+          <h2>Les valeurs CSS*</h2>
           <ul>
             <li>Une valeur passe par 4 étapes:
               <ul>
-                <li><strong>Specified value</strong>
+                <li class="fragment"><strong>Specified value</strong>
                   <ul>
                     <li>Valeur spécifiée en CSS</li>
                     <li>OU valeur héritée de son parent</li>
                     <li>OU valeur initiale de la propriété</li>
                   </ul>
                 </li>
-                <li><strong>Computed value</strong>
+                <li class="fragment"><strong>Computed value</strong>
                   <ul>
                     <li>Valeur calculée (avant rendu)</li>
                     <li>+ quelques approximations</li>
@@ -780,18 +794,18 @@ opacity: .5;</code></pre>
         </section>
 
         <section>
-          <h2>Les <span>valeurs CSS</span>*</h2>
+          <h2>Les valeurs CSS*</h2>
           <ul>
             <li>Une valeur passe par 4 étapes:
               <ul>
-                <li><strong>Used value</strong>
+                <li class="fragment"><strong>Used value</strong>
                   <ul>
                     <li>Valeur calculée + dépendances (pendant le rendu)</li>
                     <li>ex: em/rem ▸ px, width: 50% (en fonction de son parent)</li>
                     <li>Récupéree en JS avec <code>window.getComputedStyle(e)</code></li>
                   </ul>
                 </li>
-                <li><strong>Actual value</strong>
+                <li class="fragment"><strong>Actual value</strong>
                   <ul>
                     <li>Valeur réellement utilisée, approximation de l’UA</li>
                     <li>ex: bordure de 1.5px, <code>rgb(255,0,0)</code> sur écran noir&blanc, etc.</li>
@@ -808,6 +822,183 @@ opacity: .5;</code></pre>
         </section>
 
         <section data-state="part">
+          <h1>Positionnement CSS</h1>
+        </section>
+
+        <section>
+          <h2>Les différentes «méthodes»</h2>
+          <ul>
+            <li class="fragment">La propriété <code>display</code>
+              <ul>
+                <li class="fragment"><code>block</code>, <code>inline</code>, <code>list-item</code></li>
+                <li class="fragment"><code>inline-block</code></li>
+                <li class="fragment"><code>table</code>, <code>table-row</code>, <code>table-cell</code>...</li>
+              </ul>
+            </li>
+            <li class="fragment">La propriété <code>float</code>
+              <ul>
+                <li class="fragment"><code>left</code>, <code>right</code></li>
+              </ul>
+            </li>
+            <li class="fragment">La propriété <code>position</code>
+              <ul>
+                <li class="fragment"><code>relative</code>, <code>absolute</code>, <code>fixed</code>, <code>sticky</code></li>
+              </ul>
+            </li>
+          </ul>
+        </section>
+
+        <section>
+          <h2><code>display: inline-block</code></h2>
+          <ul>
+            <li class="fragment">Mode «hybride»</li>
+            <li class="fragment">Éléments en ligne, mais conserve les propriétés de block (dimensionnement, marges, etc.)</li>
+            <li class="fragment">Alignables entre eux avec <code>vertical-align</code></li>
+          </ul>
+        </section>
+
+        <section>
+          <h2>Démo: inline-block</h2>
+          <article class="demo">
+            <style>
+            #dib1 .parent {
+            }
+            #dib1 .enfant {
+              text-align: left;
+            }
+            </style>
+            <div>
+<pre><code class="liveCoding css" data-livecoding-id="dib1" contenteditable spellcheck="false">.parent {
+  
+}
+.enfant {
+  
+}</code></pre>
+            </div>
+            <div id="dib1">
+              <ul class="parent">
+                <li class="enfant">Home</li>
+                <li class="enfant">Portfolio</li>
+                <li class="enfant">News</li>
+                <li class="enfant">Contact</li>
+              </ul>
+            </div>
+          </article>
+        </section>
+
+        <section>
+          <h2><code>display: table</code></h2>
+          <ul>
+            <li class="fragment">Mode tabulaire
+              <ul>
+                <li class="fragment"><code>display: table</code> simule un tableau (<code>&lt;table></code>)</li>
+                <li class="fragment"><code>display: table-row</code> simule une ligne de tableau (<code>&lt;tr></code>)</li>
+                <li class="fragment"><code>display: table-cell</code> simule une cellule de tableau (<code>&lt;td></code>)</li>
+              </ul>
+            </li>
+            <li class="fragment">Toute la structure n'est pas obligatoire (création d'éléments anonymes)</li>
+            <li class="fragment"><code>table-layout</code> modifie le calcul d'affichage du tableau
+              <ul>
+                <li class="fragment"><code>auto</code> la taille du tableau s'adapte au contenu</li>
+                <li class="fragment"><code>fixed</code> le contenu s'adapte à la taille du tableau</li>
+              </ul>
+            </li>
+          </ul>
+        </section>
+
+        <section>
+          <h2>Les plus de <code>display: table</code></h2>
+          <ul>
+            <li class="fragment">Pas de sortie de flux</li>
+            <li class="fragment">Éléments frères de même hauteur</li>
+            <li class="fragment">Largeur étirable dans le tableau</li>
+            <li class="fragment">Alignement vertical du contenu avec <code>vertical-align</code></li>
+          </ul>
+        </section>
+
+        <section>
+          <h2>Les moins de <code>display: table</code></h2>
+          <ul>
+            <li class="fragment">Pas de marges externes</li>
+            <li class="fragment">Réorganisation des éléments difficile
+              <ul>
+                <li class="fragment">Possible (un peu) avec <code>table-header-group</code>, <code>table-footer-group</code></li>
+              </ul>
+            </li>
+            <li class="fragment"><a href="http://iamvdo.me/blog/imbrication-de-boites-en-css-avec-display-table">Imbrication plus complexe</a></li>
+          </ul>
+        </section>
+
+        <section>
+          <h2>Démo: table layout</h2>
+          <article class="demo">
+            <style>
+            #dt1 .parent {
+            }
+            #dt1 .enfant {
+              text-align: left;
+            }
+            </style>
+            <div>
+<pre><code class="liveCoding css" data-livecoding-id="dt1" contenteditable spellcheck="false">.parent {
+  background: yellowgreen;
+}
+.enfant {
+  
+}</code></pre>
+            </div>
+            <div id="dt1">
+              <ul class="parent">
+                <li class="enfant">Le premier élément</li><li class="enfant">Le second élément est plus long</li><li class="enfant">Un autre élément</li><li class="enfant">Le dernier élément est vraiment beaucoup plus long que les autres</li>
+              </ul>
+            </div>
+          </article>
+        </section>
+
+        <section>
+          <h2><code>position</code></h2>
+          <ul>
+            <li class="fragment">Sort les éléments du flux de la page</li>
+            <li class="fragment">Permet les superpositions d'éléments</li>
+            <li class="fragment">Proche de la gestion de calque</li>
+          </ul>
+          <ul>
+            <li class="fragment"><code>position: absolute</code>, <code>position: fixed</code></li>
+            <li class="fragment"><code>position: relative</code> définit l'origine des éléments positionnés inclus</li>
+          </ul>
+          <ul>
+            <li class="fragment">Positionnés ensuite avec <code>top</code>, <code>left</code>, <code>right</code> et <code>bottom</code></li>
+            <li class="fragment">Empilement avec <code>z-index</code></li>
+          </ul>
+        </section>
+
+        <section>
+          <h2>Démo: position</h2>
+          <article class="demo">
+            <style>
+            #p1 .parent {
+            }
+            #p1 .enfant {
+              text-align: left;
+            }
+            </style>
+            <div>
+<pre><code class="liveCoding css" data-livecoding-id="p1" contenteditable spellcheck="false">.parent {
+  background: yellowgreen;
+}
+.enfant {
+  
+}</code></pre>
+            </div>
+            <div id="p1">
+              <ul class="parent">
+                <li class="enfant">Le premier élément</li><li class="enfant">Le second élément est plus long</li><li class="enfant">Un autre élément</li><li class="enfant">Le dernier élément est vraiment beaucoup plus long que les autres</li>
+              </ul>
+            </div>
+          </article>
+        </section>
+
+        <section data-state="part">
           <h1>Le box model CSS</h1>
         </section>
 
@@ -817,30 +1008,61 @@ opacity: .5;</code></pre>
         </section>
 
         <section>
-          <h2>Le <span>modèle de boite</span></h2>
+          <h2>Le modèle de boite</h2>
           <ul>
             <li>Le box model en CSS2.1
               <ul>
-                <li><code>width</code> est la largeur du contenu</li>
-                <li>largeur totale = <code>width</code> + <code>padding</code> + <code>border</code></li>
+                <li class="fragment"><code>width</code> est la largeur du contenu</li>
+                <li class="fragment">largeur totale = <code>width</code> + <code>padding</code> + <code>border</code></li>
               </ul>
-              <img src="<?php echo $root; ?>iamvdo/images/modeleBoite.jpg" alt="Le modèle de boite en CSS2.1">
+              <img class="fragment" src="<?php echo $root; ?>iamvdo/images/modeleBoite.jpg" alt="Le modèle de boite en CSS2.1">
             </li>
           </ul>
         </section>
 
         <section>
-          <h2>Le <span>modèle de boite</span>, en mieux!</h2>
+          <h2>Le modèle de boite, en mieux!</h2>
           <ul>
-            <li><code>box-sizing</code> modifie le calcul du modèle de boite
+            <li class="fragment"><code>box-sizing</code> modifie le calcul du modèle de boite
               <ul>
                 <li><code>box-sizing: content-box</code>: modèle CSS2.1</li>
                 <li><code>box-sizing: border-box</code>: modèle CSS3</li>
               </ul>
             </li>
-            <li><code>width</code> devient la largeur totale</li>
+            <li class="fragment"><code>width</code> devient la largeur totale</li>
           </ul>
-          <img src="<?php echo $root; ?>iamvdo/images/boxsizing.jpg" alt="La propriété box-sizing en CSS3">
+          <img class="fragment" src="<?php echo $root; ?>iamvdo/images/boxsizing.jpg" alt="La propriété box-sizing en CSS3">
+        </section>
+
+        <section>
+          <article class="demo">
+            <style>
+            #mb1 .parent {
+              text-align: left;
+            }
+            #mb1 .enfant {
+              margin: 20px 0;
+            }
+            </style>
+            <div>
+<pre><code class="liveCoding css" data-livecoding-id="mb1" contenteditable spellcheck="false">.parent {
+  width: 1000px;
+  background: yellowgreen;
+}
+.enfant {
+  
+}</code></pre>
+            </div>
+            <div id="mb1">
+              <div class="parent">
+                <div class="enfant">
+                  <p>Je suis un élément de la page</p>
+                </div><div class="enfant">
+                  <p>Je suis un élément de la page</p>
+                </div>
+              </div>
+            </div>
+          </article>
         </section>
 
         <section class="questions questions--jdcjdr" data-state="jdcjdr">
@@ -851,12 +1073,12 @@ opacity: .5;</code></pre>
           <p class="questions-titre"><q>La largeur d'un <em>block</em> est égale à <span>100% de la largeur de son parent</span></q></p>
           <p class="questions-faux fragment">FAUX</p>
         </section>
-  
+
         <section>
-          <h2>Calcul de la <span>largeur d'un élément</span></h2>
+          <h2>Calcul de la largeur d'un élément</h2>
           <ul>
-            <li>La valeur initiale de <code>width</code> est <code>auto</code> (pas 100%)</li>
-            <li>Attention donc aux <code>padding</code> et bordures!</li>
+            <li class="fragment">La valeur initiale de <code>width</code> est <code>auto</code> (pas 100%)</li>
+            <li class="fragment">Attention donc aux <code>padding</code> et bordures!</li>
           </ul>
           <div class="fragment">
           <h3>float, inline-block</h3>
@@ -884,14 +1106,14 @@ opacity: .5;</code></pre>
         </section>
 
         <section>
-          <h2>Le <span>containing block</span></h2>
+          <h2>Le containing block</h2>
           <ul>
-            <li>La largeur dépend de la largeur de son <strong>containing block</strong>!</li>
-            <li>C'est quoi?
+            <li class="fragment">La largeur dépend de la largeur de son <strong>containing block</strong>!</li>
+            <li class="fragment">C'est quoi?
               <ul>
-                <li>Éléments en <code>position: static</code> (tous) ou <code>position: relative</code>: <strong>c'est le parent</strong></li>
-                <li>Éléments en <code>position: fixed</code>: <strong>c'est le viewport</strong> (ou la page)</li>
-                <li>Éléments en <code>position: absolute</code>: <strong>c'est le premier parent en <code>relative</code>, <code>absolute</code> ou <code>fixed</code></strong> (sinon le viewport)</li>
+                <li class="fragment">Éléments en <code>position: static</code> (tous) ou <code>position: relative</code>: <strong>c'est le parent</strong></li>
+                <li class="fragment">Éléments en <code>position: fixed</code>: <strong>c'est le viewport</strong> (ou la page)</li>
+                <li class="fragment">Éléments en <code>position: absolute</code>: <strong>c'est le premier parent en <code>relative</code>, <code>absolute</code> ou <code>fixed</code></strong> (sinon le viewport)</li>
               </ul>
             </li>
           </ul>
@@ -901,7 +1123,7 @@ opacity: .5;</code></pre>
           <h2>Le containing block en CSS3</h2>
           <ul>
             <li>De nouvelles règles:
-              <ul>
+              <ul class="fragment">
                 <li><code>transform</code> != <code>none</code></li>
                 <li><code>transform-style: preserve-3d</code></li>
                 <li><code>perspective</code></li>
@@ -911,9 +1133,9 @@ opacity: .5;</code></pre>
             </li>
           </ul>
         </section>
-        
+
         <section>
-          <h2>Le <span>containing block</span></h2>
+          <h2>Le containing block</h2>
           <article class="demo">
             <style>
             .parent {
@@ -941,7 +1163,7 @@ opacity: .5;</code></pre>
 .enfant {
   /* mettre en absolute et fixez la largeur à 100% */
   
-}</code></pre>              
+}</code></pre>
             </div>
             <div id="ex0">
               <div class="parent">
@@ -953,26 +1175,9 @@ opacity: .5;</code></pre>
         </section>
 
         <section data-state="part">
-          <h1>Positionnement</h1>
-          <h2>En CSS 2.1...</h2>
+          <h1>Interactions avancées</h1>
         </section>
 
-        <section class="questions" data-state="questions">
-          <p class="questions-titre"><q><code>vertical-align: middle</code> permet de <span>centrer verticalement du contenu</span> en CSS</q></p>
-          <p class="questions-vrai fragment">VRAI</p>
-        </section>
-
-        <section>
-          <h2>Les valeurs de <span>display</span></h2>
-          <ul>
-            <li><code>block</code>, <code>inline</code>, <code>list-item</code></li>
-            <li><code>inline-block</code></li>
-            <li><code>table</code>, <code>table-row</code>, <code>table-cell</code></li>
-          </ul>
-          <ul>
-            <li>Le contenu d'une cellule (<code>table-cell</code>) peut être aligné verticalement avec <code>vertical-align: top</code> ou <code>middle</code> ou <code>bottom</code></li>
-          </ul>
-        </section>
 
         <section class="questions" data-state="questions">
           <p class="questions-titre"><q>L’ordre d’affichage des éléments (code source) peut être modifié, <span>sans positionnement relatif, absolu ou fixe.</span></q></p>
@@ -980,17 +1185,17 @@ opacity: .5;</code></pre>
         </section>
 
         <section>
-          <h2><span>display: table</span> & Co.</h2>
+          <h2><code>display: table</code> & Co.</h2>
           <ul>
-            <li><code>table-row-group</code> (groupe de lignes)</li>
-            <li><code>table-header-group</code> (groupe de lignes d'entête)</li>
-            <li><code>table-footer-group</code> (groupe de lignes de pied de page)</li>
-            <li>Très utiles pour réorganiser ses blocs (surtout en responsive) ▸ <a href="http://www.alsacreations.fr">Alsacreations.fr</a></li>
+            <li class="fragment"><code>table-row-group</code> (groupe de lignes)</li>
+            <li class="fragment"><code>table-header-group</code> (groupe de lignes d'entête)</li>
+            <li class="fragment"><code>table-footer-group</code> (groupe de lignes de pied de page)</li>
+            <li class="fragment">Très utiles pour réorganiser ses blocs (surtout en responsive) ▸ <a href="http://www.alsacreations.fr">Alsacreations.fr</a></li>
           </ul>
         </section>
 
         <section>
-          <h2>Les valeurs de <span>display</span></h2>
+          <h2>Les valeurs de <code>display</code></h2>
           <article class="demo">
             <style>
             #ex0-5 {
@@ -1038,7 +1243,7 @@ opacity: .5;</code></pre>
         </section>
 
         <section>
-          <h2>display, float, position</h2>
+          <h2><code>display</code>, <code>float</code>, <code>position</code></h2>
           <ul>
             <li>Interactions:
               <ol>
@@ -1088,7 +1293,7 @@ opacity: .5;</code></pre>
         </section>
 
         <section>
-          <h2>display, float, position</span></h2>
+          <h2><code>display</code>, <code>float</code>, <code>position</code></span></h2>
           <article class="demo demo--side">
             <style>
             #ex0-7 .big-parent{
@@ -1132,10 +1337,10 @@ opacity: .5;</code></pre>
         </section>
 
         <section>
-          <h2>Le <span>Block Formatting Context</span></h2>
+          <h2>Le Block Formatting Context</h2>
           <ul>
             <li>BFC: <strong>contexte d’affichage block</strong></li>
-            <li>Propriétés d'un BFC:
+            <li class="fragment">Propriétés d'un BFC:
               <ul>
                 <li>Les enfants s'affichent les uns en dessous des autres</li>
                 <li>Ne «s'écoule» pas autour des flottants</li>
@@ -1144,18 +1349,17 @@ opacity: .5;</code></pre>
             </li>
             <li class="fragment">Comment créer un BFC:
               <ul>
-                <li><code>float</code></li>
-                <li><code>position: absolute</code> ou <code>fixed</code></li>
-                <li><code>display: inline-block</code> ou <code>table-cell</code> ou <code>table-caption</code></li>
-                <li><code>overflow != visible</code></li>
+                <li class="fragment"><code>float</code></li>
+                <li class="fragment"><code>position: absolute</code> ou <code>fixed</code></li>
+                <li class="fragment"><code>display: inline-block</code> ou <code>table-cell</code> ou <code>table-caption</code></li>
+                <li class="fragment"><code>overflow != visible</code></li>
               </ul>
             </li>
-            
           </ul>
         </section>
 
         <section>
-          <h2>BFC, <span>flottants</span> et frères</h2>
+          <h2>BFC, flottants et frères</h2>
           <ul>
             <li>Un BFC ne chevauche pas les flottants externes</li>
             <li>Ses marges sont implicites</li>
@@ -1232,7 +1436,7 @@ opacity: .5;</code></pre>
 .parent {
   /* Creer un BFC */
   
-}</code></pre>              
+}</code></pre>
             </div>
             <div id="ex2">
               <div class="parent">
@@ -1300,33 +1504,32 @@ opacity: .5;</code></pre>
                 <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Magni, dolorum, alias, officia consequuntur delectus omnis dolorem ratione animi maiores accusantium ut harum blanditiis debitis quasi adipisci quod porro maxime corrupti.</p>
                 <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sequi, delectus, eum, commodi blanditiis illo maxime fuga incidunt consequuntur vel nemo inventore quisquam architecto temporibus nobis deserunt totam perspiciatis quo natus? Lorem ipsum dolor sit amet, consectetur adipisicing elit. Veritatis rerum deserunt perferendis. Molestias, laudantium, doloremque voluptates dolores sequi hic facilis nobis sint eligendi ipsa architecto deleniti. Aperiam, soluta accusantium voluptas.</p>
               </div>
-              
             </div>
           </article>
         </section>
 
         <section>
-          <h2>BFC: <span>effets colatéraux</span></h2>
+          <h2>BFC: effets colatéraux</h2>
           <ul>
-            <li><code>float</code>, <code>position: absolute</code>
+            <li class="fragment"><code>float</code>, <code>position: absolute</code>
               <ul>
                 <li>modifie le flux de la page</li>
               </ul>
             </li>
-            <li><code>display: inline-block</code>
+            <li class="fragment"><code>display: inline-block</code>
               <ul>
                 <li>Ne crée pas de boite de niveau block</li>
                 <li>La taille est <em>shrink-to-fit</em></li>
               </ul>
             </li>
-            <li><code>display: table-cell</code>
+            <li class="fragment"><code>display: table-cell</code>
               <ul>
                 <li>Ne crée pas de boite de niveau block</li>
                 <li>Participe à un contexte de parents anonymes (<code>table</code>, <code>table-row</code>)</li>
                 <li>Les marges externes n'existent pas!</li>
               </ul>
             </li>
-            <li><code>overflow: hidden</code>
+            <li class="fragment"><code>overflow: hidden</code>
               <ul>
                 <li>Le plus utilisé</li>
                 <li>Mais empêche les débordements éventuels</li>
@@ -1336,45 +1539,22 @@ opacity: .5;</code></pre>
         </section>
 
         <section>
-          <h2>BFC: <span>one more thing!</span></h2>
+          <h2>BFC: one more thing!</h2>
           <ul>
             <li>Possibilité en plus: <code>display: table</code>
               <ul>
-                <li>Création d'un <code>table-cell</code> anonyme (donc BFC)</li>
-                <li>Création d'une boite de niveau block</li>
-                <li>Mais attention au calcul de taille du tableau
+                <li class="fragment">Création d'un <code>table-cell</code> anonyme (donc BFC)</li>
+                <li class="fragment">Création d'une boite de niveau block</li>
+                <li class="fragment">Mais attention au calcul de taille du tableau
                   <ul>
                     <li><code>table-layout: auto</code></li>
                     <li><code>table-layout: fixed</code></li>
                   </ul>
                 </li>
-                <li>Et donc aux débordements</li>
+                <li class="fragment">Et donc aux débordements</li>
               </ul>
             </li>
             <li class="fragment"><code><strong>&lt;troll></strong></code><span>Ça serait plus simple d'avoir <code>context: block | inline | flex</code></span> <code><strong>&lt;/troll></strong></code></li>
-          </ul>
-        </section>
-
-        <section data-state="part">
-          <h1>Positionnement</h1>
-          <h2>En CSS3...</h2>
-        </section>
-
-        <section>
-          <h2>Flexbox FTW</h2>
-          <ul>
-            <li>Flex formatting context</li>
-            <li>Comme un BFC, en plus mieux</li>
-            <li>Centrage horizontal et vertical</li>
-            <li>Réorganisation des éléments</li>
-            <li>Flexibilité des boites</li>
-            <li>Marges externes, et même automatiques</li>
-            <li>Débordements</li>
-          </ul>
-          <ul class="fragment">
-            <li><strong>LA solution</strong> à tous vos problèmes ?</li>
-            <li>Support très large, seuls IE&lt;9 ont besoin d'un <a href="https://github.com/doctyper/flexie">polyfill</a></li>
-            <li><a href="http://pleeease.io">Automatiser les préfixes</a></li>
           </ul>
         </section>
 
@@ -1384,36 +1564,36 @@ opacity: .5;</code></pre>
         </section>
 
         <section>
-          <h2>La <span>fusion des marges</span></h2>
+          <h2>La fusion des marges</h2>
           <ul>
             <li>Mécanisme qui fusionne certaines marges entres-elles</li>
-            <li>La fusion est uniquement verticale</li>
-            <li>À quel moment?
+            <li class="fragment">La fusion est uniquement verticale</li>
+            <li class="fragment">À quel moment?
               <ul>
-                <li>marge haute d’un bloc et marge haute de son premier enfant</li>
-                <li>marge basse d’un bloc et marge basse de son dernier enfant (si <code>height: auto</code>)</li>
-                <li>marge basse d’un bloc et marge haute de son suivant</li>
-                <li>marge haute et basse d’un élément sans contenu</li>
+                <li class="fragment">marge haute d’un bloc et marge haute de son premier enfant</li>
+                <li class="fragment">marge basse d’un bloc et marge basse de son dernier enfant (si <code>height: auto</code>)</li>
+                <li class="fragment">marge basse d’un bloc et marge haute de son suivant</li>
+                <li class="fragment">marge haute et basse d’un élément sans contenu</li>
               </ul>
             </li>
           </ul>
         </section>
 
         <section>
-          <h2>La <span>fusion des marges</span></h2>
+          <h2>La fusion des marges</h2>
           <ul>
-            <li>Contraintes entre suivants:
+            <li class="fragment">Contraintes entre suivants:
               <ul>
                 <li>Éléments dans le même BFC</li>
               </ul>
             </li>
-            <li>Contraintes entre parents et enfants:
+            <li class="fragment">Contraintes entre parents et enfants:
               <ul>
                 <li>Pas de fusion si le parent est un BFC</li>
                 <li>Pas de fusion si <code>padding</code> ou <code>border</code> sur le parent</li>
               </ul>
             </li>
-            <li>Lors de la fusion: la marge maximum est utilisée</li>
+            <li class="fragment">Lors de la fusion: la marge maximum est utilisée</li>
           </ul>
         </section>
 
@@ -1428,7 +1608,6 @@ opacity: .5;</code></pre>
               background: deepskyblue;
             }
             #ex4 .parent{
-              
             }
             #ex4 .enfant{
               background: tomato;
@@ -1450,17 +1629,269 @@ opacity: .5;</code></pre>
                 <p class="enfant">Enfant 1</p>
                 <p class="enfant">Enfant 2</p>
                 <p class="enfant">Enfant 3</p>
-              </div>  
+              </div>
             </div>
           </article>
         </section>
-        
+
         <section class="questions questions--jdcjdr" data-state="jdcjdr">
           <p class="questions-titre">Une marge <span>droite ou gauche</span> en % se réfère à la largeur de l'élément qui le contient.</p>
           <p class="questions-titre fragment">Une marge <span>haute ou basse</span> en % se réfère à la <strong>largeur(!)</strong> de l'élément qui le contient.</p>
           <div class="fragment info"><a href="http://www.mademyday.de/css-height-equals-width-with-pure-css.html">Le fameux trick utilisant cette technique</a></div>
         </section>
-        
+
+        <section data-state="part">
+          <h1>Positionnement CSS3</h2>
+        </section>
+
+        <section>
+          <h2>Flexbox FTW</h2>
+          <ul>
+            <li class="fragment">Flex formatting context</li>
+            <li class="fragment">Comme un BFC, en plus mieux</li>
+            <li class="fragment">Centrage horizontal et vertical</li>
+            <li class="fragment">Réorganisation des éléments</li>
+            <li class="fragment">Flexibilité des boites</li>
+            <li class="fragment">Marges externes, et même automatiques</li>
+            <li class="fragment">Débordements</li>
+          </ul>
+          <ul class="fragment">
+            <li><strong>LA solution</strong> à tous vos problèmes ?</li>
+            <li>Support très large, seuls IE&lt;9 ont besoin d'un <a href="https://github.com/doctyper/flexie">polyfill</a></li>
+            <li><a href="http://pleeease.io">Automatiser les préfixes</a></li>
+          </ul>
+        </section>
+
+        <section>
+          <h2>L'élément Flexbox</h2>
+<pre class="syntax"><code>display: flex;</code></pre>
+          <ul>
+            <li class="fragment">Définit l'élément principal Flexbox</li>
+            <li class="fragment">Les Flex items (enfants) «subissent» ce mode</li>
+          </ul>
+        </section>
+
+        <section>
+          <h2>Les axes du Flexbox</h2>
+<pre class="syntax"><code>flex-direction: row wrap</code></pre>
+          <ul>
+            <li class="fragment">Propriété <code>flex-flow</code>, un raccourci de 2 autres</li>
+          </ul>
+          <ul>
+            <li class="fragment"><code>flex-direction</code> définit <strong>l'axe principal</strong> du Flexbox
+              <ul>
+                <li class="fragment"><code>column</code>, <code>column-reverse</code>: affichage en colonnes</li>
+                <li class="fragment"><code>row</code>, <code>row-reverse</code>: affichage en lignes</li>
+              </ul>
+            </li>
+            <li class="fragment"><strong>L'axe secondaire</strong> est donc l'axe perpendiculaire</li>
+          </ul>
+          <ul>
+            <li class="fragment"><code>flex-wrap</code> gestion du débordement des lignes
+              <ul>
+                <li><code>nowrap</code></li>
+                <li><code>wrap</code>, <code>wrap-reverse</code></li>
+              </ul>
+            </li>
+          </ul>
+        </section>
+
+        <section>
+          <h2>Démo: Axes Flexbox</h2>
+          <article class="demo">
+            <style>
+            #flex1 .parent {
+            }
+            #flex1 .enfant {
+            }
+            </style>
+            <div>
+<pre><code class="liveCoding css" data-livecoding-id="flex1" contenteditable spellcheck="false">.parent {
+  
+}</code></pre>
+            </div>
+            <div id="flex1">
+              <div class="parent">
+                <div class="enfant">1</div>
+                <div class="enfant">2</div>
+                <div class="enfant">3</div>
+                <div class="enfant">4</div>
+                <div class="enfant">5</div>
+              </div>
+            </div>
+          </article>
+        </section>
+
+        <section>
+          <h2>La flexibilité</h2>
+          <pre class="syntax"><code>flex: 1 100px</code></pre>
+          <ul>
+            <li class="fragment">Propriété <code>flex</code>, un raccourci de 3 autres:
+              <ul>
+                <li class="fragment"><code>flex-grow</code> contrainte d'agrandissement</li>
+                <li class="fragment"><code>flex-shrink</code> contrainte de réduction</li>
+                <li class="fragment"><code>flex-basis</code> taille de base</li>
+              </ul>
+            </li>
+            <li class="fragment">Taille flexible</li>
+            <li class="fragment">S'applique sur chaque Flex item (enfant)</li>
+          </ul>
+        </section>
+
+        <section>
+          <h2>Ordre d'affichage</h2>
+          <pre class="syntax"><code>order: 2</code></pre>
+          <ul>
+            <li class="fragment">Propriété <code>order</code> change l'ordre d'apparition au cas par cas</li>
+            <li class="fragment">Pratique pour réorganiser, mais attention à l'accessibilité</li>
+          </ul>
+        </section>
+
+        <section>
+          <h2>Démo: flex et order</h2>
+          <article class="demo">
+            <style>
+            #flex2 .parent {
+            }
+            #flex2 .enfant {
+            }
+            </style>
+            <div>
+<pre><code class="liveCoding css" data-livecoding-id="flex2" contenteditable spellcheck="false">.parent {
+  display: flex;
+}
+.enfant {
+  
+}
+.enfant:nth-child(2) {
+  
+}</code></pre>
+            </div>
+            <div id="flex2">
+              <div class="parent">
+                <div class="enfant">1</div>
+                <div class="enfant">2</div>
+                <div class="enfant">3</div>
+                <div class="enfant">4</div>
+                <div class="enfant">5</div>
+              </div>
+            </div>
+          </article>
+        </section>
+
+        <section>
+          <h2>Alignements</h2>
+          <ul>
+            <li class="fragment">Marges classiques</li>
+            <li class="fragment">Marges automatiques: <code>margin: auto</code></li>
+          </ul>
+          <ul>
+            <li class="fragment">Alignements en fonction de l'axe (principal ou secondaire)</li>
+            <li class="fragment">Suit le <a href="http://dev.w3.org/csswg/css3-align/">Box Alignment Module</a> (non spécifique à Flexbox)</li>
+          </ul>
+        </section>
+
+        <section>
+          <h2>Démo: Marges</h2>
+          <article class="demo">
+            <style>
+            #flex3 .parent {
+            }
+            #flex3 .enfant {
+            }
+            </style>
+            <div>
+<pre><code class="liveCoding css" data-livecoding-id="flex3" contenteditable spellcheck="false">.parent {
+  display: flex;
+}
+.enfant {
+  
+}
+.enfant:nth-child(2) {
+  
+}</code></pre>
+            </div>
+            <div id="flex3">
+              <div class="parent">
+                <div class="enfant">1</div>
+                <div class="enfant">2</div>
+                <div class="enfant">3</div>
+                <div class="enfant">4</div>
+                <div class="enfant">5</div>
+              </div>
+            </div>
+          </article>
+        </section>
+
+        <section>
+          <h2>Alignement axe principal</h2>
+          <ul>
+            <li class="fragment"><code>justify-content</code> sur le parent Flexbox
+              <ul>
+                <li class="fragment"><code>flex-start</code>, <code>flex-end</code>, <code>center</code>, <code>space-between</code>, <code>space-around</code></li>
+              </ul>
+            </li>
+          </ul>
+          <img  class="fragment" src="iamvdo/images/alignPrincipal.jpg" alt="Résultat des différentes valeurs d'alignement sur l'axe principal dans Flexbox" />
+        </section>
+
+        <section>
+          <h2>Alignement axe secondaire</h2>
+          <ul>
+            <li class="fragment"><code>align-items</code> sur le parent Flexbox
+              <ul>
+                <li class="fragment"><code>flex-start</code>, <code>flex-end</code>, <code>center</code>, <code>baseline</code>, <code>stretch</code></li>
+              </ul>
+            </li>
+          </ul>
+          <img  class="fragment" src="iamvdo/images/alignSecondaire.jpg" alt="Résultat des différentes valeurs d'alignement sur l'axe secondaire dans Flexbox" />
+        </section>
+
+        <section>
+          <h2>Alignement axe secondaire</h2>
+          <ul>
+            <li class="fragment">Un élément peut avoir son propre alignement</li>
+            <li class="fragment"><code>align-self</code> sur un Flexbox item (enfant)
+              <ul>
+                <li class="fragment"><code>flex-start</code>, <code>flex-end</code>, <code>center</code>, <code>baseline</code>, <code>stretch</code></li>
+              </ul>
+            </li>
+          </ul>
+          <img class="fragment" src="iamvdo/images/alignSelf.jpg" alt="Résultat des différentes valeurs d'alignement sur l'axe secondaire pour un élement particulier dans Flexbox" />
+        </section>
+
+        <section>
+          <h2>Démo: Alignements</h2>
+          <article class="demo">
+            <style>
+            #flex4 .parent {
+            }
+            #flex4 .enfant {
+            }
+            </style>
+            <div>
+<pre><code class="liveCoding css" data-livecoding-id="flex4" contenteditable spellcheck="false">.parent {
+  display: flex;
+}
+.enfant {
+  
+}
+.enfant:nth-child(2) {
+  
+}</code></pre>
+            </div>
+            <div id="flex4">
+              <div class="parent">
+                <div class="enfant">1</div>
+                <div class="enfant">2</div>
+                <div class="enfant">3</div>
+                <div class="enfant">4</div>
+                <div class="enfant">5</div>
+              </div>
+            </div>
+          </article>
+        </section>
+
         <section data-state="part">
           <h1>Empilements CSS</h1>
         </section>
@@ -1471,17 +1902,17 @@ opacity: .5;</code></pre>
         </section>
 
         <section>
-          <h2>Contexte <span>d'empilement</span></h2>
+          <h2>Contexte d'empilement</h2>
           <ul>
             <li>Tout dépend de son <strong>contexte d’empilement</strong></li>
-            <li>Création:
+            <li class="fragment">Création:
               <ul>
                 <li>Élément racine (<code>html</code>)</li>
                 <li>Élément en <code>position: absolute</code>, <code>relative</code> ou <code>fixed</code> et <code>z-index</code> différent de <code>auto</code></li>
               </ul>
             </li>
-            <li>Les contextes d'empilement sont «hermétiques» aux autres contextes</li>
-            <li><strong>Le <code>z-index</code> est relatif à son contexte!</strong></li>
+            <li class="fragment">Les contextes d'empilement sont «hermétiques» aux autres contextes</li>
+            <li class="fragment"><strong>Le <code>z-index</code> est relatif à son contexte!</strong></li>
           </ul>
         </section>
 
@@ -1509,7 +1940,6 @@ opacity: .5;</code></pre>
             #ex5 .enfant{
               width: 200px; height: 200px;
               background: tomato;
-              
             }
             #ex5 .enfant--un{
             }
@@ -1552,40 +1982,40 @@ opacity: .5;</code></pre>
                 <div class="parent">
                   <div class="enfant enfant--trois">Enfant 3</div>
                 </div>
-              </div>  
+              </div>
             </div>
           </article>
         </section>
-        
+
         <section class="questions" data-state="questions">
           <p class="questions-titre"><q>Il est possible de modifier l’ordre d’empilement <span>sans <code>z-index</code></span></q></p>
           <p class="questions-vrai fragment">VRAI</p>
         </section>
 
         <section>
-          <h2>Ordre <span>d'affichage</span></h2>
+          <h2>Ordre d'affichage</h2>
           <ul>
             <li>Pour chaque contexte d'empilement, l'ordre est:
               <ul>
-                <li>Bordures et <code>background</code> de l’élément racine</li>
-                <li>Éléments positionnés et <code>z-index</code> négatifs</li>
-                <li>Éléments block non-positionnés</li>
-                <li>Floats</li>
-                <li>Éléments inline non-positionnés</li>
-                <li>Éléments positionnés et <code>z-index</code> auto</li>
-                <li>Éléments positionnés et <code>z-index</code> positifs</li>
+                <li class="fragment">Bordures et <code>background</code> de l’élément racine</li>
+                <li class="fragment">Éléments positionnés et <code>z-index</code> négatifs</li>
+                <li class="fragment">Éléments block non-positionnés</li>
+                <li class="fragment">Floats</li>
+                <li class="fragment">Éléments inline non-positionnés</li>
+                <li class="fragment">Éléments positionnés et <code>z-index</code> auto</li>
+                <li class="fragment">Éléments positionnés et <code>z-index</code> positifs</li>
               </ul>
             </li>
             <li class="fragment">Il est donc possible:
               <ul>
-                <li>d'afficher un enfant derrière son parent</li>
-                <li>d’intercaler des éléments</li>
-                <li>de modifier l’ordre d’empilement sans <code>z-index</code></li>
+                <li class="fragment">d'afficher un enfant derrière son parent</li>
+                <li class="fragment">d’intercaler des éléments</li>
+                <li class="fragment">de modifier l’ordre d’empilement sans <code>z-index</code></li>
               </ul>
             </li>
           </ul>
         </section>
-        
+
         <section>
           <h2>Ordre <span>d'affichage</span></h2>
           <article class="demo demo--side">
@@ -1596,7 +2026,6 @@ opacity: .5;</code></pre>
               border: 5px solid black;
             }
             #ex7 .enfant--un{
-              
             }
             #ex7 .enfant--deux{
               color: #fff !important;
@@ -1633,7 +2062,7 @@ opacity: .5;</code></pre>
             </div>
             <div id="ex7">
               <div class="enfant enfant--un">Enfant 1<span>span</span></div>
-              <div class="enfant enfant--deux">Enfant 2<span>span</span></div>  
+              <div class="enfant enfant--deux">Enfant 2<span>span</span></div>
             </div>
           </article>
         </section>
@@ -1644,7 +2073,7 @@ opacity: .5;</code></pre>
         </section>
 
         <section>
-          <h2>Contexte <span>d'empilement</span>: opacité!</h2>
+          <h2>Contexte d'empilement: opacité!</h2>
           <ul>
             <li>L’opacité &lt;1 crée un contexte d’empilement!</li>
             <li>Et en CSS3:</li>
@@ -1665,7 +2094,6 @@ opacity: .5;</code></pre>
             <style>
             #ex6{
               position: relative;
-              
             }
             #ex6 .parent{
               width: 200px; height: 200px;
@@ -1695,7 +2123,7 @@ opacity: .5;</code></pre>
             <div id="ex6">
               <div class="parent">Parent
                 <div class="enfant">Enfant</div>
-              </div>  
+              </div>
             </div>
           </article>
         </section>
@@ -1704,7 +2132,6 @@ opacity: .5;</code></pre>
           <h2>Merci, <span>questions?</span></h2>
           <p class="u-aligncenter">Vincent De Oliveira &middot; <a href="http://twitter.com/iamvdo">@iamvdo</a></p>
           <p class="u-aligncenter"><a href="http://slides.iamvdo.me/yajug15">slides.iamvdo.me/yajug15</a></p>
-          <p class="u-aligncenter">L' <a href="http://iamvdo.me/blog/ce-que-vous-avez-toujours-voulu-savoir-sur-css">article détaillé sur mon blog</a></p>
         </section>
 
       </div>

@@ -1,0 +1,95 @@
+<!doctype html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <title>Histogramme 2D</title>
+  <style>
+.chart {
+  text-align: center;
+  height: 150px;
+}
+.chart-bar {
+  display: inline-block;
+  width: 20px;
+  height: 1px;
+  vertical-align: bottom;
+  background: orangered;
+  transition: height .15s;
+}
+/*
+.init .chart-bar {
+  transition-timing-function: cubic-bezier(.4,2,.5,.8);
+}
+*/
+.chart::after {
+  content: '';
+  display: inline-block;
+  height: 100%;
+}
+
+.init .chart-bar:nth-child(1) {
+  height: 40px;
+  transition-delay: .1s;
+}
+.init .chart-bar:nth-child(2) {
+  height: 80px;
+  transition-delay: .15s;
+}
+.init .chart-bar:nth-child(3) {
+  height: 120px;
+  transition-delay: .2s;
+}
+.init .chart-bar:nth-child(4) {
+  height: 110px;
+  transition-delay: .25s;
+}
+.init .chart-bar:nth-child(5) {
+  height: 60px;
+  transition-delay: .3s;
+}
+.init .chart-bar:nth-child(6) {
+  height: 130px;
+  transition-delay: .35s;
+}
+.init .chart-bar:nth-child(7) {
+  height: 80px;
+  transition-delay: .4s;
+}
+.init .chart-bar:nth-child(8) {
+  height: 40px;
+  transition-delay: .45s;
+}
+.init .chart-bar:nth-child(9) {
+  height: 100px;
+  transition-delay: .5s;
+}
+.init .chart-bar:nth-child(10) {
+  height: 90px;
+  transition-delay: .55s;
+}
+.u-aligncenter {
+  text-align: center;
+}
+</style>
+</head>
+<body>
+  <div class="chart">
+    <div class="chart-bar"></div>
+    <div class="chart-bar"></div>
+    <div class="chart-bar"></div>
+    <div class="chart-bar"></div>
+    <div class="chart-bar"></div>
+    <div class="chart-bar"></div>
+    <div class="chart-bar"></div>
+    <div class="chart-bar"></div>
+    <div class="chart-bar"></div>
+    <div class="chart-bar"></div>
+  </div>
+  <p class="u-aligncenter"><button>Toggle anim</button></p>
+  <script>
+  document.querySelector('button').addEventListener('click', function() {
+    document.querySelector('.chart').classList.toggle('init');
+  });
+  </script>
+</body>
+</html>
