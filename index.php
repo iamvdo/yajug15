@@ -352,6 +352,79 @@ input:checked + label {
           </article>
         </section>
 
+        <section data-state="part">
+          <h1>Effets graphiques</h1>
+        </section>
+
+        <section class="questions questions--jdcjdr" data-state="jdcjdr">
+          <p class="questions-titre questions-titre--big">CSS = Design</p>
+        </section>
+
+        <section>
+          <h2>Les coins arrondis</h2>
+<pre class="syntax"><code>border-radius: 10px;</code></pre>
+          <ul>
+            <li class="fragment">Crée des coins arrondis</li>
+            <li class="fragment">Chaque angle peut avoir son propre arrondi
+              <ul>
+                <li>ex: <code>border-radius: 0 10px 2px 20px;</code></li>
+              </ul>
+            </li>
+            <li class="fragment">Accepte les pourcentages (par rapport à la boite elle-même)
+              <ul>
+                <li>ex: <code>border-radius: 50%;</code> crée un rond</li>
+              </ul>
+            </li>
+          </ul>
+        </section>
+
+        <section>
+          <h2>Les ombres</h2>
+<pre class="syntax"><code>text-shadow: 2px 2px 5px black;</code></pre>
+          <ul>
+            <li class="fragment">Ajoute une (ou plusieurs) ombre(s) sur le texte</li>
+          </ul>
+<pre class="syntax fragment"><code>box-shadow: 2px 2px 5px (5px) black (inset);</code></pre>
+          <ul>
+            <li class="fragment">Ajoute une (ou plusieurs) ombre(s) sur une boite</li>
+            <li class="fragment">L'ombre peut être interne: <code>inset</code></li>
+            <li class="fragment">L'ombre peut être plus grande ou plus petite (4<sup>ème</sup> valeur numérique)</li>
+          </ul>
+        </section>
+
+        <section>
+          <h2>Les dégradés</h2>
+<pre class="syntax fragment"><code>background: linear-gradient(to left, red, green);</code></pre>
+          <ul>
+            <li class="fragment">Crée un dégradé linéaire</li>
+            <li class="fragment">La direction est optionnelle. La valeur par défaut est <code>to bottom</code></li>
+            <li class="fragment">Nombre de couleurs "illimité"</li>
+            <li class="fragment">Positionnement des color-stops automatiques/manuels</li>
+            <li class="fragment">Existe les dégradés radiaux</li>
+          </ul>
+        </section>
+
+        <section>
+          <h2>La transparence</h2>
+<pre class="syntax fragment"><code>background: rgb(235, 162, 53);
+opacity: .5;</code></pre>
+          <ul>
+            <li class="fragment">Rends l'élément transparent (et tous les enfants)</li>
+          </ul>
+<pre class="syntax fragment"><code>background: rgba(235, 162, 53, .5);</code></pre>
+          <ul>
+            <li class="fragment">Rends la couleur appliquée transparente</li>
+            <li class="fragment">Extension de <code>rgb(r,v,b)</code> avec l'alpha</li>
+            <li class="fragment">Existe également <code>hsl(t,s,l)</code> et <code>hsla(t,s,l,a)</code></li>
+            <li class="fragment">Pensez à la dégradation gracieuse</li>
+          </ul>
+        </section>
+
+        <section>
+          <h2>Menu de navigation</h2>
+          <iframe src="iamvdo/demos/menu.html" width="100%"></iframe>
+        </section>
+
         <section>
           <h2>CSS, c'est simple!</h2>
           <ul>
@@ -366,7 +439,7 @@ input:checked + label {
   z-index: 9875687; /* p***, ça veut pas passer au-dessus! */
 }</code></pre>
         </section>
-        
+
         <section class="questions" data-state="questions">
           <p class="questions-titre"><code><strong>&lt;td></strong>CSS sucks<strong>&lt;/td></strong></code></p>
         </section>
