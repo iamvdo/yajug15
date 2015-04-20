@@ -1,0 +1,229 @@
+<!doctype html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <title>Formulaire animé</title>
+<style>
+*,
+*::after,
+*::before {
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+}
+.preload * {
+  -webkit-transition: none !important;
+  transition: none !important;
+}
+
+/* Utils
+   ========================================================================== */
+.u-aligncenter {
+  text-align: center;
+}
+.u-alignleft {
+  text-align: left;
+}
+.buttons {
+  text-align: center;
+}
+.button {
+  font-size: 1.2em;
+  padding: .6em 1.1em;
+  color: #fff;
+  text-shadow: 0 1px 2px rgba(0,0,0,.7);
+  background-color: hsl(140, 100%, 30%);
+  background-image: linear-gradient(rgba(255,255,255,.2), rgba(255,255,255,0));
+
+  border-radius: 3px;
+  box-shadow: 0 1px 0 rgba(255,255,255,.4) inset, 0 1px 5px rgba(0,0,0,.8);
+
+  border: none;
+
+  margin: 20px;
+  outline: none;
+}
+.button--danger {
+  background-color: hsl(0, 100%, 40%);
+}
+.button--info {
+  background-color: hsl(200, 100%, 40%);
+}
+
+.button:hover,
+.button:focus {
+  box-shadow: 0 1px 0 rgba(255,255,255,.4) inset, 0 0 10px 3px hsl(140, 100%, 30%), 0 1px 5px rgba(0,0,0,.8);
+}
+.button--danger:hover,
+.button--danger:focus {
+  box-shadow: 0 1px 0 rgba(255,255,255,.4) inset, 0 0 10px 3px hsl(0, 100%, 30%), 0 1px 5px rgba(0,0,0,.8);
+}
+.button--info:hover,
+.button--info:focus {
+  box-shadow: 0 1px 0 rgba(255,255,255,.4) inset, 0 0 10px 3px hsl(200, 100%, 30%), 0 1px 5px rgba(0,0,0,.8);
+}
+
+.button:active {
+  background-image: linear-gradient(rgba(0,0,0,.3), rgba(0,0,0,.1));
+  box-shadow: 0 -1px 0 rgba(255,255,255,.4) inset, 0 2px 3px rgba(0,0,0,.8) inset;
+  color: rgba(0,0,0,.9);
+  text-shadow: 0 1px 0 rgba(255,255,255,.5);
+}
+form {
+  width: 300px;
+  padding: 30px;
+  margin: 50px auto;
+  border-radius: 3px;
+  background: #eee;
+  box-shadow: 0 3px 5px rgba(0,0,0,.5);
+}
+.invalid {
+  -webkit-animation: invalid .7s 1;
+  animation: invalid .7s 1;
+}
+input {
+  display: block;
+  font-size: .9em;
+  width: 100%;
+  margin: 10px 0;
+}
+/* override buttons */
+.button {
+  display: block;
+  margin: 20px auto 10px;
+  font-size: .8em;
+  box-shadow: none;
+}
+.button:hover,
+.button:focus {
+  box-shadow: none;
+}
+
+@-webkit-keyframes invalid {
+  from {
+    -webkit-transform: translateX(0);
+    transform: translateX(0);
+  }
+  10% {
+    -webkit-transform: translateX(-20px);
+    transform: translateX(-20px);
+  }
+  20% {
+    -webkit-transform: translateX(18px);
+    transform: translateX(18px);
+  }
+  30% {
+    -webkit-transform: translateX(-16px);
+    transform: translateX(-16px);
+  }
+  40% {
+    -webkit-transform: translateX(14px);
+    transform: translateX(14px);
+  }
+  50% {
+    -webkit-transform: translateX(-12px);
+    transform: translateX(-12px);
+  }
+  60% {
+    -webkit-transform: translateX(10px);
+    transform: translateX(10px);
+  }
+  70% {
+    -webkit-transform: translateX(-8px);
+    transform: translateX(-8px);
+  }
+  80% {
+    -webkit-transform: translateX(6px);
+    transform: translateX(6px);
+  }
+  90% {
+    -webkit-transform: translateX(-4px);
+    transform: translateX(-4px);
+  }
+  to {
+    -webkit-transform: translateX(0);
+    transform: translateX(0);
+  }
+}
+
+@keyframes invalid {
+  from {
+    -webkit-transform: translateX(0);
+    transform: translateX(0);
+  }
+  10% {
+    -webkit-transform: translateX(-20px);
+    transform: translateX(-20px);
+  }
+  20% {
+    -webkit-transform: translateX(18px);
+    transform: translateX(18px);
+  }
+  30% {
+    -webkit-transform: translateX(-16px);
+    transform: translateX(-16px);
+  }
+  40% {
+    -webkit-transform: translateX(14px);
+    transform: translateX(14px);
+  }
+  50% {
+    -webkit-transform: translateX(-12px);
+    transform: translateX(-12px);
+  }
+  60% {
+    -webkit-transform: translateX(10px);
+    transform: translateX(10px);
+  }
+  70% {
+    -webkit-transform: translateX(-8px);
+    transform: translateX(-8px);
+  }
+  80% {
+    -webkit-transform: translateX(6px);
+    transform: translateX(6px);
+  }
+  90% {
+    -webkit-transform: translateX(-4px);
+    transform: translateX(-4px);
+  }
+  to {
+    -webkit-transform: translateX(0);
+    transform: translateX(0);
+  }
+}
+</style>
+</head>
+<body>
+  <form>
+    <input placeholder="Adresse email" type="text" name="email">
+    <input placeholder="Mot de passe" type="password" name="pass">
+    <button type="submit" class="button">Connexion</button>
+  </form>
+  <script>
+  function isOK (evt) {
+
+    var form = evt.currentTarget;
+
+    if (form.elements["email"].value !== '' && form.elements["pass"].value !== '') {
+      // formulaire OK
+
+    } else {
+      // formulaire pas OK
+      form.classList.add('invalid');
+
+      form.addEventListener('animationend', function () {
+        form.classList.remove('invalid');
+      });
+
+    }
+    
+    
+
+    evt.preventDefault();
+
+  }
+  document.querySelector('form').addEventListener('submit', isOK);
+    </script>
+</body>
+</html>

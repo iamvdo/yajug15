@@ -435,6 +435,228 @@ opacity: .5;</code></pre>
           <iframe src="iamvdo/demos/menu.html" width="100%"></iframe>
         </section>
 
+        <section data-state="part">
+          <h1>Animations</h1>
+        </section>
+
+        <section class="questions questions--jdcjdr" data-state="jdcjdr">
+          <p class="questions-titre questions-titre--big">CSS ~= Motion Design</p>
+        </section>
+
+        <section>
+          <h2>Animez simplement: les transitions</h2>
+          <ul>
+            <li class="fragment">C'est quoi une transition?</li>
+          </ul>
+          <ul>
+            <li class="fragment">Animer une propriété <strong>d'une valeur A à une valeur B</strong>
+              <ul>
+                <li class="fragment">Par exemple de <code>color: red</code> à <code>color: green</code></li>
+              </ul>
+            </li>
+            <li class="fragment">Effectuée lors d'un changement d'état
+              <ul>
+                <li class="fragment">Pour cela, besoin d'un <strong>déclencheur</strong></li>
+              </ul>
+            </li>
+          </ul>
+        </section>
+
+        <section>
+          <h2>Déclencheurs</h2>
+          <ul>
+            <li class="fragment">Utilisation de pseudo-classes (<code>:hover</code>, <code>:focus</code>, etc.)</li>
+            <li class="fragment">Modification via JavaScript (ajout de classe, etc.)</li>
+            <li class="fragment">Chargement de la page (?)</li>
+          </ul>
+        </section>
+
+        <section>
+          <h2>Utilisation</h2>
+<pre class="syntax fragment"><code>transition: width 2s ease;</code></pre>
+          <ul>
+            <li class="fragment">5 propriétés:
+              <ul>
+                <li class="fragment"><code>transition</code>: propriété raccourcie</li>
+                <li class="fragment"><code>transition-property</code>: propriété à animer</li>
+                <li class="fragment"><code>transition-duration</code>: durée de la transition</li>
+                <li class="fragment"><code>transition-delay</code>: retardement de la transition</li>
+                <li class="fragment"><code>transition-timing-function</code>: méthode d'interpolation</li>
+              </ul>
+            </li>
+          </ul>
+        </section>
+
+        <section data-state="showcase">
+          <article class="demo">
+            <style>
+            #t0 .element {
+              margin: 100px auto;
+              padding: 50px;
+            }
+            </style>
+            <div>
+<pre><code class="liveCoding css" data-livecoding-id="t0" contenteditable spellcheck="false">.element {
+  width: 200px; /* etat initial */
+  height: 150px;
+  background: orangered;
+}
+.element:hover {
+  
+}
+</code></pre>
+            </div>
+            <div id="t0">
+              <div class="element">
+                <p>Je suis un élément de la page</p>
+              </div>
+            </div>
+          </article>
+        </section>
+
+        <section>
+          <h2>L'accélération</h2>
+          <ul>
+            <li class="fragment">Contrôle de la vitesse de l'animation dans le temps</li>
+            <li class="fragment">Propriété <code>transition-timing-function</code></li>
+          </ul>
+          <img class="fragment" src="iamvdo/images/trTimingFn.png" alt="Methode d'interpolation des transitions CSS" />
+          <ul>
+            <li class="fragment">5 méthodes:
+              <ul>
+                <li class="fragment"><code>linear</code>: linéaire</li>
+                <li class="fragment"><code>ease</code>: départ rapide, arrivée lente (défaut)</li>
+                <li class="fragment"><code>ease-in</code>: départ lent</li>
+                <li class="fragment"><code>ease-out</code>: arrivée lente</li>
+                <li class="fragment"><code>ease-in-out</code>: départ lent, arrivée lente</li>
+              </ul>
+            </li>
+          </ul>
+        </section>
+
+        <section>
+          <h2>Interpolation avancée</h2>
+          <ul>
+            <li class="fragment">La fonction <code>cubic-bezier()</code>
+            <li class="fragment">Définit une courbe de Bézier avec 2 points</li>
+            <li class="fragment"><code>cubic-bezier(p1x, p1y, p2x, p2y)</code></li>
+          </ul>
+          <img class="fragment" src="iamvdo/images/trCubic.png" alt="Courbe de bezier pour les transitions CSS" />
+          <ul>
+            <li class="fragment">Aide: <a href="http://cubic-bezier.com">cubic-bezier.com</a></li>
+          </ul>
+        </section>
+
+        <section data-state="showcase">
+          <article class="demo">
+            <style>
+            #t2 .parent {
+              margin: 100px 0;
+            }
+            #t2 .element {
+              margin: 20px;
+              padding: 10px;
+              width: 200px;
+              height: 50px;
+              background: orangered;
+              white-space: nowrap;
+            }
+            #t2 .parent:hover .element {
+              margin-left: calc(100% - 200px - 20px - 20px);
+            }
+            </style>
+            <div>
+<pre><code class="liveCoding css" data-livecoding-id="t2" contenteditable spellcheck="false">.element {
+  transition: margin-left 2s;
+}
+.element--un {
+  /* defaut: ease */
+}
+.element--deux {
+  transition-timing-function: ease;
+}
+</code></pre>
+            </div>
+            <div id="t2">
+              <div class="parent">
+                <div class="element element--un">
+                  <p>Element 1</p>
+                </div>
+                <div class="element element--deux">
+                  <p>Element 2</p>
+                </div>
+              </div>
+            </div>
+          </article>
+        </section>
+
+        <section data-state="showcase">
+          <h2>Menu de navigation</h2>
+          <iframe src="iamvdo/demos/transitions.html" width="100%"></iframe>
+        </section>
+
+        <section>
+          <h2>Animez plusieurs états: les animations</h2>
+          <ul>
+            <li class="fragment">C'est quoi une animation?</li>
+          </ul>
+          <ul>
+            <li class="fragment">Plusieurs transitions qui s'enchainent</li>
+            <li class="fragment">Animer une propriété <strong>d'une valeur A à une valeur B, puis de B à C, ...</strong>
+              <ul>
+                <li class="fragment">Par exemple de <code>color: red</code> à <code>color: green</code> puis vers <code>color: blue</code></li>
+              </ul>
+            </li>
+            <li class="fragment">Chaque transition est définie sour forme d'étapes</li>
+            <li class="fragment">2 actions nécessaires
+              <ul>
+                <li class="fragment">Création des étapes-clés</li>
+                <li class="fragment">Utilisation de l'animation créée</li>
+              </ul>
+            </li>
+          </ul>
+        </section>
+
+        <section>
+          <h2>Création des étapes-clés</h2>
+<pre class="syntax fragment"><code>@keyframes nomAnim {
+  from { color: red   }
+  40%  { color: green }
+  to   { color: blue  }
+}</code></pre>
+          <ul>
+            <li class="fragment">Définit 3 étapes, soit 2 transitions:
+              <ul>
+                <li class="fragment">de 0 à 40%: de <code>color: red</code> à <code>color: green</code></li>
+                <li class="fragment">de 40% à 100%: de <code>color: green</code> à <code>color: blue</code></li>
+              </ul>
+            </li>
+            <li class="fragment">Revient à l'état initial une fois l'animation terminée</li>
+          </ul>
+        </section>
+
+        <section>
+          <h2>Utilisation</h2>
+<pre class="syntax fragment"><code>animation: nomAnim 2s ease 5;</code></pre>
+          <ul>
+            <li class="fragment">6 propriétés:
+              <ul>
+                <li class="fragment"><code>animation</code>: propriété raccourcie</li>
+                <li class="fragment"><code>animation-name</code>: nom de l'animation utilisée</li>
+                <li class="fragment"><code>animation-duration</code>: durée de l'animation</li>
+                <li class="fragment"><code>animation-delay</code>: retardement de l'animation</li>
+                <li class="fragment"><code>animation-timing-function</code>: méthode d'interpolation</li>
+                <li class="fragment"><code>animation-iteration-count</code>: nombre de répétition</li>
+              </ul>
+            </li>
+          </ul>
+        </section>
+
+        <section data-state="showcase">
+          <h2>Formulaire animé</h2>
+          <iframe src="iamvdo/demos/animations.html" width="100%" height="500"></iframe>
+        </section>
+
         <section>
           <h2>CSS, c'est simple!</h2>
           <ul>
@@ -526,7 +748,7 @@ opacity: .5;</code></pre>
           <p class="questions-titre">Pour augmenter la spécificité d'une classe, vous pouvez la doubler. Pas besoin d'en ajouter.</p>
           <p class="questions-titre fragment"><code>.class.class { }</code></p>
         </section>
-        
+
         <section class="questions" data-state="questions">
           <p class="questions-titre"><q>La valeur définie pour une propriété CSS est celle <span>utilisée pour le rendu de la page</span></q></p>
           <p class="questions-faux fragment">FAUX</p>
