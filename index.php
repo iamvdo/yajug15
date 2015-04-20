@@ -327,6 +327,15 @@ if (!isset($root)) {
               <li class="fragment"><code>:checked</code></li>
           </ul>
           <article class="demo fragment">
+            <style>
+            #e3 {
+              text-align: center;
+            }
+            #e3 p {
+              display: inline-block;
+              margin: 0 .5em;
+            }
+            </style>
             <div>
 <pre><code class="liveCoding" data-livecoding-id="e3" contenteditable spellcheck="false">input {
   vertical-align: middle;
@@ -341,9 +350,6 @@ input:checked + label {
               <p><input type="checkbox" id="ch3" /><label for="ch3">Checkbox 3</label></p>
             </div>
           </article>
-          <ul class="small">
-              <li class="fragment">Présentation de Ryan Seddon: <a href="http://www.thecssninja.com/talks/abuse_checkboxes/">«101 ways to (ab)use a checkbox»</a></li>
-          </ul>
         </section>
 
         <section>
