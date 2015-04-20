@@ -1119,7 +1119,7 @@ if (!isset($root)) {
         <section class="me">
           <h2>Merci, <span>questions?</span></h2>
           <p class="u-aligncenter">Vincent De Oliveira &middot; <a href="http://twitter.com/iamvdo">@iamvdo</a></p>
-          <p class="u-aligncenter"><a href="http://slides.iamvdo.me/cssparis1">slides.iamvdo.me/cssparis1</a></p>
+          <p class="u-aligncenter"><a href="http://slides.iamvdo.me/yajug15">slides.iamvdo.me/yajug15</a></p>
           <p class="u-aligncenter">L' <a href="http://iamvdo.me/blog/ce-que-vous-avez-toujours-voulu-savoir-sur-css">article détaillé sur mon blog</a></p>
         </section>
 
@@ -1128,7 +1128,7 @@ if (!isset($root)) {
     </div>
 
     <div class="info-overlay" id="info-twitter"><a href="https://twitter.com/iamvdo">@iamvdo</a></div>
-    <div class="info-overlay" id="info-slides"><a href="http://slides.iamvdo.me/cssparis1">slides.iamvdo.me/cssparis1</a></div>
+    <div class="info-overlay" id="info-slides"><a href="http://slides.iamvdo.me/yajug15">slides.iamvdo.me/yajug15</a></div>
 
     <script src="<?php echo $root; ?>lib/js/head.min.js"></script>
     <script src="<?php echo $root; ?>js/reveal.min.js"></script>
