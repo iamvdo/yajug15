@@ -2128,6 +2128,15 @@ opacity: .5;</code></pre>
           </article>
         </section>
 
+        <section>
+          <h2>Ressources</h2>
+          <ul>
+            <li><a href="http://letrainde13h37.fr/17/transitions-et-animations-css/">Les transitions / animations</a></li>
+            <li><a href="http://iamvdo.me/blog/ce-que-vous-avez-toujours-voulu-savoir-sur-css">CSS, les bases avancées</a> (contexte de formatge, BFC, empilement, etc.)</li>
+            <li><a href="http://css3create.com">Plus de démos en CSS3</a></li>
+          </ul>
+        </section>
+
         <section class="me">
           <h2>Merci, <span>questions?</span></h2>
           <p class="u-aligncenter">Vincent De Oliveira &middot; <a href="http://twitter.com/iamvdo">@iamvdo</a></p>
