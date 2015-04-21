@@ -269,6 +269,11 @@ a {
           <h2>La pseudo-classe <code>:nth-child()</code></h2>
           <article>
             <div>
+            <style>
+            #e2 li {
+              color: black;
+            }
+            </style>
 <pre class="small"><code class="liveCoding language-markup" data-livecoding-id="e2" contenteditable spellcheck="false">&lt;ul>
   &lt;li>Item 1&lt;/li>
   &lt;li>Item 2&lt;/li>
@@ -282,7 +287,7 @@ a {
   &lt;li>Item 10&lt;/li>
 &lt;/ul></code></pre>
 <pre class="small"><code class="liveCoding" data-livecoding-id="e2" contenteditable spellcheck="false">ul li:nth-child(3n+2) {
-   color: black;
+   color: white;
 }</code></pre>
             </div>
             <div id="e2">
@@ -349,13 +354,16 @@ a {
               display: inline-block;
               margin: 0 .5em;
             }
+            #e3 label {
+              color: black;
+            }
             </style>
             <div>
 <pre><code class="liveCoding" data-livecoding-id="e3" contenteditable spellcheck="false">input {
   vertical-align: middle;
 }
 input:checked + label {
-  color: black;
+  color: white;
 }</code></pre>
             </div>
             <div id="e3">
