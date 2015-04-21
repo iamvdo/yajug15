@@ -77,6 +77,9 @@ if (!isset($root)) {
           <h1>Bref historique</h1>
         </section>
 
+        <section data-background="url(iamvdo/images/arbre1.jpg) center" data-background-size="cover">
+        </section>
+
         <section>
           <h2>CSS1</h2>
           <ul>
@@ -671,6 +674,9 @@ opacity: .5;</code></pre>
           <h1>Back to the CSS</h1>
         </section>
 
+        <section data-background="url(iamvdo/images/arbre2.jpg) center" data-background-size="cover">
+        </section>
+
         <section>
           <h2>CSS, c'est simple!</h2>
           <ul>
@@ -1178,6 +1184,8 @@ opacity: .5;</code></pre>
           <h1>Interactions avancées</h1>
         </section>
 
+        <section data-background="url(iamvdo/images/arbre3.jpg) center" data-background-size="cover">
+        </section>
 
         <section class="questions" data-state="questions">
           <p class="questions-titre"><q>L’ordre d’affichage des éléments (code source) peut être modifié, <span>sans positionnement relatif, absolu ou fixe.</span></q></p>
@@ -1894,6 +1902,9 @@ opacity: .5;</code></pre>
 
         <section data-state="part">
           <h1>Empilements CSS</h1>
+        </section>
+
+        <section data-background="url(iamvdo/images/arbre4.jpg) center" data-background-size="cover">
         </section>
 
         <section class="questions" data-state="questions">
