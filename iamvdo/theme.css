@@ -51,6 +51,11 @@ body {
 #info-slides {
   left: 150px;
 }
+@media (max-width: 550px) {
+  #info-slides {
+    display: none;
+  }
+}
 .reveal .slides > section {
     height: 100%;
     padding: 50px 0;
