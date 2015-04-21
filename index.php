@@ -152,6 +152,7 @@ if (!isset($root)) {
           <h2>Mais c'est quoi au fait ?</h2>
           <ul>
             <li class="fragment">Cascading Style Sheets: feuilles de styles en cascade</li>
+            <li class="fragment">Le design d'un site (mise ne forme)</li>
             <li class="fragment">Langage de description</li>
             <li class="fragment">Très (trop?) simple</li>
           </ul>
