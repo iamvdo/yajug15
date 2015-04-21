@@ -2167,12 +2167,14 @@ opacity: .5;</code></pre>
     <script>
 
       // master?
+      /*
       var file = 'client';
       var secret = null;
       if (window.location.pathname.indexOf('master') !== -1) {
         file = 'master';
         secret = '14290135599873480339';
       }
+      */
 
       // Full list of configuration options available here:
       // https://github.com/hakimel/reveal.js#configuration
@@ -2190,13 +2192,13 @@ opacity: .5;</code></pre>
         // Parallax scrolling
         //parallaxBackgroundImage: 'https://s3.amazonaws.com/hakim-static/reveal-js/reveal-parallax-1.jpg',
         //parallaxBackgroundSize: '2100px 900px',
-
+        /*
         multiplex: {
           secret: secret,
           id: '7d70fbcbce612db0',
           url: 'revealjs.jit.su:80'
         },
-
+        */
 
         // Optional libraries used to extend on reveal.js
         dependencies: [
@@ -2207,9 +2209,7 @@ opacity: .5;</code></pre>
           { src: '<?php echo $root; ?>plugin/zoom-js/zoom.js', async: true, condition: function() { return !!document.body.classList; } },
           { src: '<?php echo $root; ?>plugin/prefixfree/prefixfree.js', async: true },
           { src: '<?php echo $root; ?>plugin/live-coding/live-coding.js', async: true, condition: function() { return !!document.body.classList; }},
-          { src: '<?php echo $root; ?>plugin/nav/nav.js', async: true},
-          { src: '//cdnjs.cloudflare.com/ajax/libs/socket.io/0.9.10/socket.io.min.js', async: true },
-          { src: '<?php echo $root; ?>plugin/multiplex/' + file + '.js', async: true }
+          { src: '<?php echo $root; ?>plugin/nav/nav.js', async: true}
 
         ]
       });
