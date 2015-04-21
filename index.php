@@ -508,7 +508,7 @@ opacity: .5;</code></pre>
             }
             </style>
             <div>
-<pre><code class="liveCoding css" data-livecoding-id="t0" contenteditable spellcheck="false">.element {
+<pre class="small"><code class="liveCoding css" data-livecoding-id="t0" contenteditable spellcheck="false">.element {
   width: 200px; /* etat initial */
   height: 150px;
   background: orangered;
@@ -581,9 +581,7 @@ opacity: .5;</code></pre>
 <pre><code class="liveCoding css" data-livecoding-id="t2" contenteditable spellcheck="false">.element {
   transition: margin-left 2s;
 }
-.element--un {
-  /* defaut: ease */
-}
+.element--un { /* default: ease */ }
 .element--deux {
   transition-timing-function: ease;
 }
@@ -956,7 +954,7 @@ opacity: .5;</code></pre>
             </style>
             <div>
 <pre><code class="liveCoding css" data-livecoding-id="dt1" contenteditable spellcheck="false">.parent {
-  background: yellowgreen;
+  
 }
 .enfant {
   
@@ -999,7 +997,7 @@ opacity: .5;</code></pre>
             </style>
             <div>
 <pre><code class="liveCoding css" data-livecoding-id="p1" contenteditable spellcheck="false">.parent {
-  background: yellowgreen;
+  
 }
 .enfant {
   
@@ -1887,7 +1885,7 @@ opacity: .5;</code></pre>
             }
             </style>
             <div>
-<pre><code class="liveCoding css" data-livecoding-id="flex4" contenteditable spellcheck="false">.parent {
+<pre class="small"><code class="liveCoding css" data-livecoding-id="flex4" contenteditable spellcheck="false">.parent {
   display: flex;
 }
 .enfant {
